@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Wired Earphones - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .earphones-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .earphone-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .earphone-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .earphone-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for earphones..."
+            onkeyup="filterEarphones()"
+        >
+    </div>
+
+    <!-- Earphones Section -->
+    <h2 class="section-title">Top Wired Earphones</h2>
+    <div class="earphones-container" id="earphonesContainer">
+        <!-- Sennheiser Earphones -->
+        <div class="earphone-box">
+            <img src="https://m.media-amazon.com/images/I/51ov0q9cRvL.jpg" alt="Sennheiser CX 300S">
+            <h4>Sennheiser CX 300S</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Great sound quality, a must-buy for music lovers!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Comfortable fit, but bass could be better.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sony Earphones -->
+        <div class="earphone-box">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/61eqJoa4MBL._AC_UL600_SR600,600_.jpg" alt="Sony MDR-EX150AP">
+            <h4>Sony MDR-EX150AP</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Clear sound with decent bass for the price.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Perfect for everyday use, very comfortable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JBL Earphones -->
+        <div class="earphone-box">
+            <img src="https://images.fonearena.com/blog/wp-content/uploads/2019/12/JBL-C100TWS-1024x511.jpg" alt="JBL C100TWS">
+            <h4>JBL C100TWS</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Decent bass and noise isolation, great for travel.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>Sound quality is very good for the price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Philips Earphones -->
+                <div class="earphone-box">
+                    <img src="https://m.media-amazon.com/images/I/518-+0jg8BS._AC_UF1000,1000_QL80_.jpg" alt="Philips SHE1505">
+                    <h4>Philips SHE1505</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Deepak Kumar">
+                            <div class="review-content">
+                                <h5>Deepak Kumar</h5>
+                                <p>Affordable and durable with decent sound clarity.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Anjali Thakur">
+                            <div class="review-content">
+                                <h5>Anjali Thakur</h5>
+                                <p>Perfect for casual use, very comfortable fit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Realme Earphones -->
+                <div class="earphone-box">
+                    <img src="https://m.media-amazon.com/images/I/61BYFuHb7lL.jpg" alt="Realme Buds 2">
+                    <h4>Realme Buds 2</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Arvind Singh">
+                            <div class="review-content">
+                                <h5>Arvind Singh</h5>
+                                <p>Impressive bass and sound quality for the price.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Shruti Verma">
+                            <div class="review-content">
+                                <h5>Shruti Verma</h5>
+                                <p>Stylish design and excellent build quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Panasonic Earphones -->
+                <div class="earphone-box">
+                    <img src="https://m.media-amazon.com/images/I/51PFHzfSjQL.jpg" alt="Panasonic ErgoFit">
+                    <h4>Panasonic ErgoFit</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Rajesh Nair">
+                            <div class="review-content">
+                                <h5>Rajesh Nair</h5>
+                                <p>Lightweight and very comfortable for long usage.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Priya Sharma">
+                            <div class="review-content">
+                                <h5>Priya Sharma</h5>
+                                <p>Decent audio quality with good noise isolation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+        <!-- BoAt Earphones -->
+        <div class="earphone-box">
+            <img src="https://m.media-amazon.com/images/I/61dXeWYn4ZL.jpg" alt="BoAt Bassheads 152">
+            <h4>BoAt Bassheads 152</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Great budget option with excellent bass.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Affordable and reliable, perfect for daily use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skullcandy Earphones -->
+        <div class="earphone-box">
+            <img src="https://m.media-amazon.com/images/I/51nHNZqctsL.jpg" alt="Skullcandy Jib+">
+            <h4>Skullcandy Jib+</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Good sound for its price range.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Ritu Agarwal">
+                    <div class="review-content">
+                        <h5>Ritu Agarwal</h5>
+                        <p>Stylish design and decent sound quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterEarphones() {
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            const earphones = document.querySelectorAll('.earphone-box');
+
+            earphones.forEach((earphone) => {
+                const earphoneName = earphone.querySelector('h4').innerText.toLowerCase();
+                if (earphoneName.includes(searchQuery)) {
+                    earphone.style.display = 'block';
+                } else {
+                    earphone.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

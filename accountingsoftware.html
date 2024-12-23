@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Accounting Software - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for accounting software..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Accounting Software Section -->
+    <h2 class="section-title">Top Accounting Software</h2>
+    <div class="apps-container" id="appsContainer">
+
+        <!-- QuickBooks -->
+        <div class="app-box">
+            <img src="https://pbs.twimg.com/profile_images/1605268968268144641/mDZ-0Y08_400x400.png" alt="QuickBooks">
+            <h4>QuickBooks</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="John Doe">
+                    <div class="review-content">
+                        <h5>John Doe</h5>
+                        <p>Great for small businesses, but the subscription fees can be a bit high.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Jane Smith">
+                    <div class="review-content">
+                        <h5>Jane Smith</h5>
+                        <p>Easy to use and integrates well with other financial tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Xero -->
+        <div class="app-box">
+            <img src="https://sm.pcmag.com/pcmag_me/review/x/xero/xero_167n.png" alt="Xero">
+            <h4>Xero</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="David Lee">
+                    <div class="review-content">
+                        <h5>David Lee</h5>
+                        <p>Best for cloud-based accounting, but the learning curve is steep.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Emily Johnson">
+                    <div class="review-content">
+                        <h5>Emily Johnson</h5>
+                        <p>Highly customizable and suitable for businesses of all sizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FreshBooks -->
+        <div class="app-box">
+            <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_991e7b27368257437809e4d32c25f701/freshbooks.jpg" alt="FreshBooks">
+            <h4>FreshBooks</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Michael Brown">
+                    <div class="review-content">
+                        <h5>Michael Brown</h5>
+                        <p>Perfect for freelancers, simple to use, but lacks some advanced features.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Sarah Taylor">
+                    <div class="review-content">
+                        <h5>Sarah Taylor</h5>
+                        <p>Great customer support, but can get expensive for large teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zoho Books -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/ZXKSlh-VFpFbTXm-NoBnACkiDQ4W6lxlnigqHFFD6UA50Ix-4PaSCOSMp2ekLbyO7w" alt="Zoho Books">
+            <h4>Zoho Books</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Mark Wilson">
+                    <div class="review-content">
+                        <h5>Mark Wilson</h5>
+                        <p>Affordable and feature-rich, but the mobile app is a bit slow.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Linda Green">
+                    <div class="review-content">
+                        <h5>Linda Green</h5>
+                        <p>Excellent for managing finances, but could use more payroll features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sage 50cloud -->
+        <div class="app-box">
+            <img src="https://softwareconnect.com/images/sage-50-review-361124?w=1200&h=627" alt="Sage 50cloud">
+            <h4>Sage 50cloud</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Tom Harris">
+                    <div class="review-content">
+                        <h5>Tom Harris</h5>
+                        <p>Great for small businesses with basic accounting needs, but the software can be buggy.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Rachel Adams">
+                    <div class="review-content">
+                        <h5>Rachel Adams</h5>
+                        <p>Strong on accounting features but could use better customer support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Accounting -->
+        <div class="app-box">
+            <img src="https://i.pcmag.com/imagery/reviews/05RZ9kt20hRmvereS8C4BVz-5..v1569471498.png" alt="Wave Accounting">
+            <h4>Wave Accounting</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Paul Scott">
+                    <div class="review-content">
+                        <h5>Paul Scott</h5>
+                        <p>Free to use and great for small businesses, but lacks payroll functionality.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Laura Mitchell">
+                    <div class="review-content">
+                        <h5>Laura Mitchell</h5>
+                        <p>Very user-friendly, but limited integrations with other tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intacct -->
+        <div class="app-box">
+            <img src="https://avatars.githubusercontent.com/u/11096364?s=280&v=4" alt="Intacct">
+            <h4>Intacct</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Gary King">
+                    <div class="review-content">
+                        <h5>Gary King</h5>
+                        <p>Excellent for larger businesses, but expensive for smaller firms.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Victoria Harris">
+                    <div class="review-content">
+                        <h5>Victoria Harris</h5>
+                        <p>Great for financial reporting and automation, but the interface is complex.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kashoo -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoe06oG3aQ24u9GXiM8EzX57B25flO8FPTU9V7w0iP4K6vYnH7Agumr9JU8uEIikoPJTs&usqp=CAU" alt="Kashoo">
+            <h4>Kashoo</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Nathan Baker">
+                    <div class="review-content">
+                        <h5>Nathan Baker</h5>
+                        <p>Good for freelancers but lacks some advanced accounting features.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Nancy Walker">
+                    <div class="review-content">
+                        <h5>Nancy Walker</h5>
+                        <p>Affordable and simple, but lacks reporting options for larger businesses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Filtering functionality
+        function filterApps() {
+            const searchBar = document.getElementById('searchBar');
+            const filter = searchBar.value.toLowerCase();
+            const appsContainer = document.getElementById('appsContainer');
+            const apps = appsContainer.getElementsByClassName('app-box');
+
+            for (let i = 0; i < apps.length; i++) {
+                let appName = apps[i].getElementsByTagName('h4')[0].innerText;
+                if (appName.toLowerCase().indexOf(filter) > -1) {
+                    apps[i].style.display = "";
+                } else {
+                    apps[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

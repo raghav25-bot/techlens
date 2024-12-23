@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Shopping Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for shopping apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Shopping Apps Section -->
+    <h2 class="section-title">Top Shopping Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- Amazon -->
+        <div class="app-box">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7f/13/29/7f1329d5-6dd2-6506-c0aa-a1bbe254bcd7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/1200x600wa.png" alt="Amazon">
+            <h4>Amazon</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>The best app for online shopping! Great deals and fast delivery.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Convenient and reliable, love the Prime membership perks!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flipkart -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxggIt5CPQqUxKi3eW4QhNIKv5eH5LdhRwMA&s" alt="Flipkart">
+            <h4>Flipkart</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Great platform for shopping in India, excellent customer service!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Fast delivery and good discounts during sales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- eBay -->
+        <div class="app-box">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-ebay-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-2-pack-logos-icons-2944843.png" alt="eBay">
+            <h4>eBay</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Great for finding unique and rare items, trusted platform.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>The bidding feature is fun and I always find good deals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AliExpress -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVE1FTJEo8PRxN4rZdAIO1dscEFE-Pd9MW9Q&s" alt="AliExpress">
+            <h4>AliExpress</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Awesome app for cheap products, great for international shopping.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Fantastic prices, but shipping can take some time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Walmart -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/B6RPtEHgHoLbh_C16H28Iy7efN469AKEaAwILDERihgfQsfv5XyGywpDldzAY3fU2HaO" alt="Walmart">
+            <h4>Walmart</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Great selection and competitive prices, plus easy returns.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Rina Patil">
+                    <div class="review-content">
+                        <h5>Rina Patil</h5>
+                        <p>Easy to navigate, fast delivery options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Myntra -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/wpnNPYIrdHC3Q_bcFXGpwoMvFvvvQnZJHmFKzumq5ZTRZKIzfxURAUGOMqhPhVxnggY" alt="Myntra">
+            <h4>Myntra</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Amit Kumar">
+                    <div class="review-content">
+                        <h5>Amit Kumar</h5>
+                        <p>Awesome app for fashion shopping, always great discounts!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Anjali Verma">
+                    <div class="review-content">
+                        <h5>Anjali Verma</h5>
+                        <p>Love the collection of clothes, easy returns policy too!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Snapdeal -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/hziKsl2DkKiLS4Rqo7KGA6r_shz6A7ihOK9Mdlfn0p1oAuJRGOXr9Ohp6l5igxkhEK8L" alt="Snapdeal">
+            <h4>Snapdeal</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Sandeep Yadav">
+                    <div class="review-content">
+                        <h5>Sandeep Yadav</h5>
+                        <p>Great app for affordable shopping, easy navigation.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Sunita Rao">
+                    <div class="review-content">
+                        <h5>Sunita Rao</h5>
+                        <p>Great deals and quality products. I love shopping here!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ShopClues -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcbrO88xE9dq71BaY1EUmkctC01PcEist2iQ&s" alt="ShopClues">
+            <h4>ShopClues</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Vikram Singh">
+                    <div class="review-content">
+                        <h5>Vikram Singh</h5>
+                        <p>Awesome platform with affordable products and great deals.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Meena Sharma">
+                    <div class="review-content">
+                        <h5>Meena Sharma</h5>
+                        <p>Good variety of items, though delivery time can be better.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const apps = document.querySelectorAll(".app-box");
+            apps.forEach(app => {
+                const appName = app.querySelector("h4").textContent.toLowerCase();
+                if (appName.includes(query)) {
+                    app.style.display = "block";
+                } else {
+                    app.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

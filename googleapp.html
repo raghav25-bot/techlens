@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Google Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for Google apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Google Apps Section -->
+    <h2 class="section-title">Top Google Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- Google Meet -->
+        <div class="app-box">
+            <img src="https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v1/web-96dp/logo_meet_2020q4_color_2x_web_96dp.png" alt="Google Meet">
+            <h4>Google Meet</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Great for video calls, especially for work meetings!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Easy to use and seamless integration with Google Calendar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Drive -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3RaendkWxwbnlsA8UyDPmcDbqIMQETxKYpw&s" alt="Google Drive">
+            <h4>Google Drive</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Best cloud storage, I can access my files anywhere.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Syncs everything across devices and great for collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Photos -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsjsM8J4frwD3x3WF1dFWJRZHCehx8NOr4NQ&s" alt="Google Photos">
+            <h4>Google Photos</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Love the automatic backup feature, never worry about losing photos!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>Great for organizing and searching through my photos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Chrome -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K1MBp5OR01eb86PpFK1H3gogNShxOTFIwQ&s" alt="Google Chrome">
+            <h4>Google Chrome</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Fast, reliable, and my go-to browser for everything.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Extensions make browsing so much easier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBN5hy4CH4J-WFpcSyWm82bgdCq1CK2GO8Nw&s" alt="Google Maps">
+            <h4>Google Maps</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Reliable and accurate navigation, never get lost!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Rina Patil">
+                    <div class="review-content">
+                        <h5>Rina Patil</h5>
+                        <p>Great for exploring new places and checking reviews.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Translate -->
+        <div class="app-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/281/281776.png" alt="Google Translate">
+            <h4>Google Translate</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Siddharth Rao">
+                    <div class="review-content">
+                        <h5>Siddharth Rao</h5>
+                        <p>Very helpful when traveling abroad and communicating in different languages!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Simran Kapoor">
+                    <div class="review-content">
+                        <h5>Simran Kapoor</h5>
+                        <p>Accurate translations, and voice input is a game-changer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Calendar -->
+        <div class="app-box">
+            <img src="https://1000logos.net/wp-content/uploads/2021/12/Google-Calendar-Logo.png" alt="Google Calendar">
+            <h4>Google Calendar</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Raj Mehta">
+                    <div class="review-content">
+                        <h5>Raj Mehta</h5>
+                        <p>Helps me stay organized and never miss an appointment.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Anita Joshi">
+                    <div class="review-content">
+                        <h5>Anita Joshi</h5>
+                        <p>Perfect for scheduling meetings and managing personal events.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Keep -->
+        <div class="app-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965358.png" alt="Google Keep">
+            <h4>Google Keep</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Vikram Desai">
+                    <div class="review-content">
+                        <h5>Vikram Desai</h5>
+                        <p>Great for taking quick notes and reminders on the go.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Meera Singh">
+                    <div class="review-content">
+                        <h5>Meera Singh</h5>
+                        <p>Easy to organize thoughts and tasks, and sync across devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const apps = document.querySelectorAll(".app-box");
+            apps.forEach(app => {
+                const appName = app.querySelector("h4").textContent.toLowerCase();
+                if (appName.includes(query)) {
+                    app.style.display = "block";
+                } else {
+                    app.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

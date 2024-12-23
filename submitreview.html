@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .auth-buttons button {
+            color: white;
+            background-color: #007bff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .auth-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Form Section */
+        .form-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f4f4f4;
+        }
+        .form-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: none;
+            height: 150px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-actions .submit-btn {
+            background-color: #007bff;
+        }
+        .form-actions .reset-btn {
+            background-color: #575757;
+        }
+        .form-actions .reset-btn:hover {
+            background-color: #333;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .footer-content p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .social-media a {
+            color: white;
+            margin: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">
+            TECH<span>LENS</span>
+        </a>
+        <div class="navbar-links">
+            <a href="gadjets.html">Gadgets</a>
+            <a href="apps.html">Apps</a>
+            <a href="software.html">Software</a>
+            <a href="submitreview.html">Submit Review</a>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="signInWithGoogle()">Sign In with Google</button>
+            <button onclick="signInWithFacebook()">Sign In with Facebook</button>
+        </div>
+    </div>
+
+    <!-- Submit Review Form Section -->
+    <div class="form-section">
+        <h2>Submit Your Review</h2>
+        <form action="submit_review_process.php" method="POST">
+            <!-- User Details -->
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Product Category -->
+            <div class="form-group">
+                <label for="product-category">Product You Want to Review:</label>
+                <select id="product-category" name="product-category" onchange="filterProductTypes()" required>
+                    <option value="">Select a Category</option>
+                    <option value="gadgets">Gadgets</option>
+                    <option value="apps">Apps</option>
+                    <option value="software">Software</option>
+                </select>
+            </div>
+
+            <!-- Product Type -->
+            <div class="form-group">
+                <label for="product-type">Select a Specific Type:</label>
+                <select id="product-type" name="product-type" required>
+                    <option value="">Select a Type</option>
+                </select>
+            </div>
+
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="product-name">Enter the Product Name:</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Enter the product name" required>
+            </div>
+
+            <!-- Review Content -->
+            <div class="form-group">
+                <label for="review-content">Write Your Review (Max 500 Words):</label>
+                <textarea id="review-content" name="review-content" maxlength="500" placeholder="Share your experience here..." required></textarea>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us:</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://x.com" target="_blank">
+                    <i class="fab fa-twitter"></i> X
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p style="margin-top: 20px;">Address: KIET, Ghaziabad, 201206</p>
+        </div>
+    </footer>
+
+    <script>
+        function signInWithGoogle() {
+            alert('Google Sign-In Clicked! Add your OAuth logic.');
+        }
+
+        function signInWithFacebook() {
+            alert('Facebook Sign-In Clicked! Add your OAuth logic.');
+        }
+
+        const productTypes = {
+            gadgets: ['Mobile Phones', 'Watches', 'Laptops', 'Earphones', 'Headphones', 'Printers', 'Mouse', 'Keyboard', 'Tablet', 'Power Bank'],
+            apps: ['Medical Apps', 'Google Apps', 'Gaming Apps', 'Microsoft Apps', 'Fitness Apps', 'Payment Apps', 'Educational Apps', 'Shopping Apps'],
+            software: ['Antivirus Software', 'Editing Software', 'Accounting Software', 'Development Tools']
+        };
+
+        function filterProductTypes() {
+            const category = document.getElementById('product-category').value;
+            const productTypeDropdown = document.getElementById('product-type');
+
+            productTypeDropdown.innerHTML = '<option value="">Select a Type</option>';
+            if (category && productTypes[category]) {
+                productTypes[category].forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type.toLowerCase().replace(/\s+/g, '-');
+                    option.textContent = type;
+                    productTypeDropdown.appendChild(option);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

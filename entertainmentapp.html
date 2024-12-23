@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Entertainment Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for entertainment apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Entertainment Apps Section -->
+    <h2 class="section-title">Top Entertainment Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- Netflix -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMtgTlVXmjQ7-7QZAOZy1XsliMt3K2nQzDvg&s" alt="Netflix">
+            <h4>Netflix</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Great content variety and amazing streaming quality!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>My favorite platform for movies and TV shows!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- YouTube -->
+        <div class="app-box">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/023/986/704/small/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.png" alt="YouTube">
+            <h4>YouTube</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Perfect for watching my favorite videos and tutorials!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Endless content to explore, always something new!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spotify -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/1200px-Spotify_App_Logo.svg.png" alt="Spotify">
+            <h4>Spotify</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Great music selection, easy to use, and perfect for playlists!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>Love the personalized playlists, keeps me entertained!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TikTok -->
+        <div class="app-box">
+            <img src="https://cdn.pixabay.com/photo/2021/01/30/06/42/tiktok-5962992_640.png" alt="TikTok">
+            <h4>TikTok</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Endless fun, the best app for short videos!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>So addictive, I can spend hours on it!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disney+ Hotstar -->
+        <div class="app-box">
+            <img src="https://images.sftcdn.net/images/t_app-icon-m/p/40cafa9e-c62d-4242-bf0b-45003285e1c6/4236099912/disney-plus-apps.9878.14495311847124170.294fed91-ba37-4b8a-83dc-b4098d97cebb.png" alt="Disney+ Hotstar">
+            <h4>Disney+ Hotstar</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Fantastic shows and movies, especially for Marvel fans!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Rina Patil">
+                    <div class="review-content">
+                        <h5>Rina Patil</h5>
+                        <p>Excellent for streaming live sports events!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amazon Prime Video -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/04rBJNzGde7ZS3Il2UTM-xZ1HueDTTiHiYzGtl2Ie_INZM-JK-n1EVKI5J74ZFgCGPg=w600-h300-pc0xffffff-pd" alt="Amazon Prime Video">
+            <h4>Amazon Prime Video</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Ravi Sharma">
+                    <div class="review-content">
+                        <h5>Ravi Sharma</h5>
+                        <p>Great shows and movies, always a top pick for streaming!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Meera Verma">
+                    <div class="review-content">
+                        <h5>Meera Verma</h5>
+                        <p>The quality of content and streaming is superb!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hulu -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/4whGAVjZGrrlNxzheKAfBXrxggtyAb4euWLeQI8fDfVfdnFEZjE0DZTJ8DKoh64pqcIa=w600-h300-pc0xffffff-pd" alt="Hulu">
+            <h4>Hulu</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Sandeep Kumar">
+                    <div class="review-content">
+                        <h5>Sandeep Kumar</h5>
+                        <p>Excellent content selection for TV shows and original series!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Riya Patel">
+                    <div class="review-content">
+                        <h5>Riya Patel</h5>
+                        <p>Love the live TV and the extensive library of series!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const apps = document.querySelectorAll(".app-box");
+            apps.forEach(app => {
+                const appName = app.querySelector("h4").textContent.toLowerCase();
+                if (appName.includes(query)) {
+                    app.style.display = "block";
+                } else {
+                    app.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

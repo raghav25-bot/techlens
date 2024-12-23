@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Keyboards - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .keyboards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .keyboard-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .keyboard-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .keyboard-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for keyboards..."
+            onkeyup="filterKeyboards()"
+        >
+    </div>
+
+    <!-- Keyboard Section -->
+    <h2 class="section-title">Top Keyboards</h2>
+    <div class="keyboards-container" id="keyboardsContainer">
+        <!-- Apple Keyboard -->
+        <!-- Example for Apple Magic Keyboard -->
+<div class="keyboard-box">
+    <a href="https://www.amazon.com/dp/B08H9K3Z7R" target="_blank">
+        <img src="https://m.media-amazon.com/images/I/71vwNsgEi8L._AC_UF1000,1000_QL80_.jpg" alt="Apple Keyboard">
+    </a>
+    <h4>Apple Magic Keyboard</h4>
+    <div class="reviews-container">
+        <div class="review-box">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Aarav Sharma">
+            <div class="review-content">
+                <h5>Aarav Sharma</h5>
+                <p>Sleek and responsive, perfect for typing long documents.</p>
+            </div>
+        </div>
+        <div class="review-box">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Meera Kapoor">
+            <div class="review-content">
+                <h5>Meera Kapoor</h5>
+                <p>Love the quiet keys, feels premium to type on.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- HP Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://m.media-amazon.com/images/I/51F5ycjUg4L.jpg" alt="HP Keyboard">
+            <h4>HP Wireless Keyboard</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Raj Malhotra">
+                    <div class="review-content">
+                        <h5>Raj Malhotra</h5>
+                        <p>Good build quality with responsive keys, but a bit noisy.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Priya Verma">
+                    <div class="review-content">
+                        <h5>Priya Verma</h5>
+                        <p>Comfortable for long typing sessions, but could be more durable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dell Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://www.bhphotovideo.com/images/fb/dell_580afqv_km117_wireless_keyboard_and_1293107.jpg" alt="Dell Keyboard">
+            <h4>Dell KM117 Wireless Keyboard</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Ankit Gupta">
+                    <div class="review-content">
+                        <h5>Ankit Gupta</h5>
+                        <p>Easy to set up and comfortable for everyday use.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Simran Kaur">
+                    <div class="review-content">
+                        <h5>Simran Kaur</h5>
+                        <p>Affordable and efficient, but the keys feel a bit stiff.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ant Esports Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://m.media-amazon.com/images/I/512Tz-pFkdS.jpg" alt="Ant Esports Keyboard">
+            <h4>Ant Esports MK1200</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Neha Joshi">
+                    <div class="review-content">
+                        <h5>Neha Joshi</h5>
+                        <p>Excellent mechanical keyboard for gamers at a reasonable price.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Rohit Singh">
+                    <div class="review-content">
+                        <h5>Rohit Singh</h5>
+                        <p>The RGB lights add to the gaming experience!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logitech Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://m.media-amazon.com/images/I/61GRqGxbZVL._AC_UF1000,1000_QL80_.jpg" alt="Logitech Keyboard">
+            <h4>Logitech K780 Multi-Device Keyboard</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vikram Joshi">
+                    <div class="review-content">
+                        <h5>Vikram Joshi</h5>
+                        <p>Great for switching between devices, but a bit bulky.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Anjali Verma">
+                    <div class="review-content">
+                        <h5>Anjali Verma</h5>
+                        <p>Convenient, especially for working with multiple gadgets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corsair Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://m.media-amazon.com/images/I/71PzW7vZNUL.jpg" alt="Corsair Keyboard">
+            <h4>Corsair K95 RGB Platinum</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Karan Bhattacharya">
+                    <div class="review-content">
+                        <h5>Karan Bhattacharya</h5>
+                        <p>Amazing mechanical feel, ideal for gamers.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Shruti Agarwal">
+                    <div class="review-content">
+                        <h5>Shruti Agarwal</h5>
+                        <p>Expensive, but the quality and customizability are worth it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Razer Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://m.media-amazon.com/images/I/61DP8L9ooYL.jpg" alt="Razer Keyboard">
+            <h4>Razer Huntsman Mini</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Aditya Kumar">
+                    <div class="review-content">
+                        <h5>Aditya Kumar</h5>
+                        <p>Compact and quick, the sound and feedback are perfect!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Nisha Yadav">
+                    <div class="review-content">
+                        <h5>Nisha Yadav</h5>
+                        <p>A fantastic keyboard for both gaming and work!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft Keyboard -->
+        <div class="keyboard-box">
+            <img src="https://www.cnet.com/a/img/resize/db4d367fb3edb277b52fc85664cf4550e425127e/hub/2013/08/22/acc8bc54-6797-11e3-846b-14feb5ca9861/Microsoft_Sculpt_Ergonomic_Desktop_35826700_02.jpg?auto=webp&fit=crop&height=900&width=1200" alt="Microsoft Keyboard">
+            <h4>Microsoft Sculpt Ergonomic Keyboard</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Manish Patel">
+                    <div class="review-content">
+                        <h5>Manish Patel</h5>
+                        <p>Super comfortable for long hours of typing, especially with wrist support.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Sonali Mehta">
+                    <div class="review-content">
+                        <h5>Sonali Mehta</h5>
+                        <p>Ergonomic design makes typing much more comfortable!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterKeyboards() {
+            const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+            const keyboards = document.getElementsByClassName('keyboard-box');
+            
+            for (let i = 0; i < keyboards.length; i++) {
+                const keyboardName = keyboards[i].getElementsByTagName('h4')[0].textContent.toLowerCase();
+                if (keyboardName.includes(searchTerm)) {
+                    keyboards[i].style.display = 'block';
+                } else {
+                    keyboards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

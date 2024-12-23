@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Medical Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for medical apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Medical Apps Section -->
+    <h2 class="section-title">Top Medical Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- Medisafe -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/vD1dTDEFNEiPJBdwUnz3WS2sVKFwXQevwOc7X2O73q1qyHZJPJyatKXrHEb-br6HPSM=s256-rw" alt="Medisafe">
+            <h4>Medisafe</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Helps me remember to take my medication on time. Highly recommend!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Great app for managing multiple medications. Easy to use!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MyFitnessPal -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKugGZ_1ykaRh8VoiLIHIdS7Eo8pf-j5-39g&s" alt="MyFitnessPal">
+            <h4>MyFitnessPal</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Great for tracking diet and exercise. A must-have for fitness enthusiasts!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Helps me stay on track with my fitness goals. Excellent tracking tools!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WebMD -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/Wg9aaBdA6X4IagSnb4b8en4XxYgiR0X5ZGCokNwRbhky8sd_ZQdjorvQBk9Sb63pDUQ" alt="WebMD">
+            <h4>WebMD</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Quick and easy access to medical information. Very helpful in emergencies.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>WebMD is great for general health questions and advice. Love the symptom checker!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctor On Demand -->
+        <div class="app-box">
+            <img src="https://pbs.twimg.com/profile_images/917861570645958657/TRtpq2FZ_400x400.jpg" alt="Doctor On Demand">
+            <h4>Doctor On Demand</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Great app for virtual doctor consultations. Saved me a trip to the clinic!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Convenient and quick. Doctors are professional and helpful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HealthifyMe -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA6hVQ8r34331i-Xksvt6xO3a15SX_hhW3cA&s" alt="HealthifyMe">
+            <h4>HealthifyMe</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vishal Kumar">
+                    <div class="review-content">
+                        <h5>Vishal Kumar</h5>
+                        <p>Good app for tracking food intake and fitness. Easy to use and effective.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Anjali Mishra">
+                    <div class="review-content">
+                        <h5>Anjali Mishra</h5>
+                        <p>Excellent app for personalized health advice. It helped me lose weight!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1mg -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3uwK-Jo4awLWQbvrSASmkKaRsguDcG98V4Q&s" alt="1mg">
+            <h4>1mg</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Ravi Singh">
+                    <div class="review-content">
+                        <h5>Ravi Singh</h5>
+                        <p>Convenient for ordering medicines online. Very reliable service.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Kiran Kumari">
+                    <div class="review-content">
+                        <h5>Kiran Kumari</h5>
+                        <p>Excellent app for buying medicines and health products at discounted prices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apollo -->
+        <div class="app-box">
+            <img src="https://pbs.twimg.com/profile_images/1555471287295692800/APKZzBVw_400x400.jpg" alt="Apollo">
+            <h4>Apollo</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Sanjay Yadav">
+                    <div class="review-content">
+                        <h5>Sanjay Yadav</h5>
+                        <p>Great app for booking doctor appointments and health check-ups online.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Preeti Kumari">
+                    <div class="review-content">
+                        <h5>Preeti Kumari</h5>
+                        <p>Reliable health services and easy to use. A must-have app for health services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterApps() {
+            let query = document.getElementById('searchBar').value.toLowerCase();
+            let apps = document.getElementsByClassName('app-box');
+
+            for (let app of apps) {
+                let appName = app.getElementsByTagName('h4')[0].innerText.toLowerCase();
+                if (appName.includes(query)) {
+                    app.style.display = "";
+                } else {
+                    app.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

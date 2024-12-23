@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Laptops - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .laptops-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .laptop-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .laptop-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .laptop-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for laptops..."
+            onkeyup="filterLaptops()"
+        >
+    </div>
+
+    <!-- Laptop Section -->
+    <h2 class="section-title">Top Laptops</h2>
+    <div class="laptops-container" id="laptopsContainer">
+        <!-- Apple Laptops -->
+        <div class="laptop-box">
+            <img src="https://www.apple.com/newsroom/images/2024/10/new-macbook-pro/article/Apple-MacBook-Pro-M4-lineup_big.jpg.large.jpg" alt="MacBook Pro 16">
+            <h4>Apple MacBook Pro 16</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Aarav Sharma">
+                    <div class="review-content">
+                        <h5>Aarav Sharma</h5>
+                        <p>Best for content creators, powerful performance!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Meera Kapoor">
+                    <div class="review-content">
+                        <h5>Meera Kapoor</h5>
+                        <p>Smooth and efficient for video editing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Samsung Laptops -->
+        <div class="laptop-box">
+            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRTWSriGGO5i2Q9C91WKT5tlCAf14NelzTsMlIreJCRSbP9B0l_zRGgFKdbXkD97-2y3Dd41wUcetO3SesqIfbkUOHxrk8-sCJ0U-cGfmtwm1DhIE9OXgYdDw" alt="Samsung Galaxy Book 3 Ultra">
+            <h4>Samsung Galaxy Book 4 Ultra</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Raj Malhotra">
+                    <div class="review-content">
+                        <h5>Raj Malhotra</h5>
+                        <p>Great design, excellent performance for multitasking.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Priya Verma">
+                    <div class="review-content">
+                        <h5>Priya Verma</h5>
+                        <p>Perfect for business professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acer Predator Laptops -->
+        <div class="laptop-box">
+            <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtdNXXi8kengvzWD0yANVI-k_SrogAYHXap69bUv7rOL-gT9GRlNFgh1Xphqm8Sp29NULZt9cH7XwmQpkjBv5kVM8ttdbMszQuLXLnsMZUVGmWkdt6INfcGLE" alt="Acer Predator Helios 16">
+            <h4>Acer Predator Helios 16</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Ankit Gupta">
+                    <div class="review-content">
+                        <h5>Ankit Gupta</h5>
+                        <p>A beast for gaming with an incredible cooling system.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Simran Kaur">
+                    <div class="review-content">
+                        <h5>Simran Kaur</h5>
+                        <p>Handles AAA games effortlessly!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HP Victus Laptops -->
+        <div class="laptop-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEByCBI6pBXzr09UtHIN_BCFE6nrBPGXWhYg&s" alt="HP Victus 16">
+            <h4>HP Victus 16</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Neha Joshi">
+                    <div class="review-content">
+                        <h5>Neha Joshi</h5>
+                        <p>Affordable gaming laptop with excellent performance.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Rohit Singh">
+                    <div class="review-content">
+                        <h5>Rohit Singh</h5>
+                        <p>Impressive battery backup for a gaming laptop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asus Tuf A15 -->
+        <div class="laptop-box">
+            <img src="https://m.media-amazon.com/images/I/91MW2X7lrfL._AC_UF1000,1000_QL80_.jpg" alt="Lenovo ThinkPad X1 Carbon">
+            <h4>Asus Tuf A15</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vikram Joshi">
+                    <div class="review-content">
+                        <h5>Vikram Joshi</h5>
+                        <p>Durable and lightweight, great for business professionals.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Anjali Verma">
+                    <div class="review-content">
+                        <h5>Anjali Verma</h5>
+                        <p>Impressive performance with sleek design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft Surface Laptop 5 -->
+        <div class="laptop-box">
+            <img src="https://images-cdn.ubuy.co.in/644cfdab42de8661f655f08e-microsoft-surface-laptop-5-2022-15.jpg" alt="Microsoft Surface Laptop 5">
+            <h4>Microsoft Surface Laptop 5</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Samir Patil">
+                    <div class="review-content">
+                        <h5>Samir Patil</h5>
+                        <p>Great battery life and ultra-portable.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Rina Kumar">
+                    <div class="review-content">
+                        <h5>Rina Kumar</h5>
+                        <p>Perfect for everyday use and work on the go.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dell XPS 13 -->
+        <div class="laptop-box">
+            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/9345/media-gallery/touch/gray/notebook-xps-13-9345-t-gray-gallery-4.psd?fmt=pjpg&pscan=auto&scl=1&wid=3509&hei=2082&qlt=100,1&resMode=sharp2&size=3509,2082&chrss=full&imwidth=5000" alt="Dell XPS 13">
+            <h4>Dell XPS 13</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Arvind Reddy">
+                    <div class="review-content">
+                        <h5>Arvind Reddy</h5>
+                        <p>Compact, powerful, and great display!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/9.jpg" alt="Sneha Agarwal">
+                    <div class="review-content">
+                        <h5>Sneha Agarwal</h5>
+                        <p>Perfect balance of power and portability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ASUS ROG Strix G15 -->
+        <div class="laptop-box">
+            <img src="https://images-cdn.ubuy.co.in/635737e74155771ca30f3755-asus-rog-strix-g15-advantage-edition.jpg" alt="ASUS ROG Strix G15">
+            <h4>ASUS ROG Strix G15</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Kunal Mehra">
+                    <div class="review-content">
+                        <h5>Kunal Mehra</h5>
+                        <p>Powerful gaming laptop with excellent graphics.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Shweta Patel">
+                    <div class="review-content">
+                        <h5>Shweta Patel</h5>
+                        <p>Great value for money, smooth gaming experience!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterLaptops() {
+            const searchInput = document.getElementById("searchBar").value.toLowerCase();
+            const laptops = document.querySelectorAll(".laptop-box");
+
+            laptops.forEach((laptop) => {
+                const laptopName = laptop.querySelector("h4").textContent.toLowerCase();
+                if (laptopName.includes(searchInput)) {
+                    laptop.style.display = "block";
+                } else {
+                    laptop.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .app-box:hover {
+            transform: scale(1.05);
+        }
+        .app-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .app-box p {
+            color: #555;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .app-box a {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .app-box a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+        <div>
+            <a href="apps.html">APPS</a>
+            <a href="gadjets.html">GADGETS</a>
+            <a href="software.html">SOFTWARE</a>
+            <a href="submitreview.html">SUBMIT REVIEW</a>
+        </div>
+    </div>
+
+    <!-- Apps Section -->
+    <h2 class="section-title">Apps</h2>
+    <div class="apps-container">
+        <!-- Fitness Apps -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Fitness_logo_watchos.png" alt="Fitness App">
+            <h4>Fitness Apps</h4>
+            <p>Track your workouts and achieve your fitness goals.</p>
+            <a href="fitnessapp.html">Explore</a>
+        </div>
+
+        <!-- Finance Apps -->
+        <div class="app-box">
+            <img src="https://cdn.dribbble.com/users/2549976/screenshots/9779421/media/de0c54138c7995e26f3eb222ebb7046d.png?resize=400x0" alt="Finance App">
+            <h4>Payment Apps</h4>
+            <p>Manage your money and investments easily.</p>
+            <a href="financeapp.html">Explore</a>
+        </div>
+
+        <!-- Gaming Apps -->
+        <div class="app-box">
+            <img src="https://w7.pngwing.com/pngs/654/766/png-transparent-game-gaming-play-topup-financial-tech-app-icon.png" alt="Gaming App">
+            <h4>Gaming Apps</h4>
+            <p>Exciting games for entertainment and fun.</p>
+            <a href="gamingapp.html">Explore</a>
+        </div>
+
+        <!-- Educational Apps -->
+        <div class="app-box">
+            <img src="https://logowik.com/content/uploads/images/education635.logowik.com.webp" alt="Educational App">
+            <h4>Educational Apps</h4>
+            <p>Learn new skills and enhance your knowledge.</p>
+            <a href="educationalapp.html">Explore</a>
+        </div>
+
+        <!-- Entertainment Apps -->
+        <div class="app-box">
+            <img src="https://dcassetcdn.com/design_img/192125/112563/112563_2213079_192125_image.jpg" alt="Entertainment App">
+            <h4>Entertainment Apps</h4>
+            <p>Stream music, movies, and shows anytime.</p>
+            <a href="entertainmentapp.html">Explore</a>
+        </div>
+
+        
+        <!-- Shopping Apps -->
+        <div class="app-box">
+            <img src="https://i.pinimg.com/originals/ce/56/99/ce5699233cbc0f142250b520d967dff7.png" alt="Shopping App">
+            <h4>Shopping Apps</h4>
+            <p>Shop for your favorite products easily.</p>
+            <a href="shoppingapp.html">Explore</a>
+        </div>
+
+        <!-- Google Apps -->
+        <div class="app-box">
+            <img src="https://cdn2.hubspot.net/hubfs/53/image8-2.jpg" alt="Google Apps">
+            <h4>Google Apps</h4>
+            <p>Essential tools for productivity and communication.</p>
+            <a href="googleapp.html">Explore</a>
+        </div>
+
+        <!-- Microsoft Apps -->
+        <div class="app-box">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/RWCZER-Legal-IP-Trademarks-CP-MS-logo-740x417-1?wid=406&hei=230&fit=crop" alt="Microsoft Apps">
+            <h4>Microsoft Apps</h4>
+            <p>Powerful apps for work and collaboration.</p>
+            <a href="microsoftapp.html">Explore</a>
+        </div>
+
+        <!-- Medical Apps -->
+        <div class="app-box">
+            <img src="https://img.freepik.com/premium-vector/health-care-medical-logo-vector-design_990473-2554.jpg" alt="Medical App">
+            <h4>Medical Apps</h4>
+            <p>Track health metrics and consult doctors online.</p>
+            <a href="medicalapp.html">Explore</a>
+        </div>
+    </div>
+
+</body>
+</html>

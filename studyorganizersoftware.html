@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Study Software - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for study software..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Study Software Section -->
+    <h2 class="section-title">Top Study Software</h2>
+    <div class="apps-container" id="appsContainer">
+
+        <!-- Notion -->
+        <div class="app-box">
+            <img src="https://sm.pcmag.com/pcmag_me/review/n/notion/notion_5egj.png" alt="Notion">
+            <h4>Notion</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="John Doe">
+                    <div class="review-content">
+                        <h5>John Doe</h5>
+                        <p>Incredibly flexible for note-taking, project management, and organizing thoughts.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Jane Smith">
+                    <div class="review-content">
+                        <h5>Jane Smith</h5>
+                        <p>Great for personal and academic organization, but it could use more offline features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Evernote -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6SJyRZIpyp8vWr5NYrv476VY97noSwAaF5g&s" alt="Evernote">
+            <h4>Evernote</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="David Lee">
+                    <div class="review-content">
+                        <h5>David Lee</h5>
+                        <p>Perfect for organizing notes and research, though the free version is limited.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Emily Johnson">
+                    <div class="review-content">
+                        <h5>Emily Johnson</h5>
+                        <p>Great for saving and syncing across devices, but the interface could be cleaner.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Todoist -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx79J9D-zp_4o7hXsa2YJkZCqxsNBSL3PKAg&s" alt="Todoist">
+            <h4>Todoist</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Michael Brown">
+                    <div class="review-content">
+                        <h5>Michael Brown</h5>
+                        <p>Helps me organize my tasks effectively, but it could use more advanced filtering options.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Sarah Taylor">
+                    <div class="review-content">
+                        <h5>Sarah Taylor</h5>
+                        <p>Simple and efficient task manager, but the premium features are necessary for full functionality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anki -->
+        <div class="app-box">
+            <img src="https://download.logo.wine/logo/Anki_(company)/Anki_(company)-Logo.wine.png" alt="Anki">
+            <h4>Anki</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Mark Wilson">
+                    <div class="review-content">
+                        <h5>Mark Wilson</h5>
+                        <p>Best for memorization, especially for language learners, but the interface is outdated.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Linda Green">
+                    <div class="review-content">
+                        <h5>Linda Green</h5>
+                        <p>Incredibly powerful for spaced repetition, though the learning curve can be steep.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft OneNote -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoyjgp6vtG7Pj7ljjGGlIV5Y5JXru2yEVVCg&s" alt="Microsoft OneNote">
+            <h4>Microsoft OneNote</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Tom Harris">
+                    <div class="review-content">
+                        <h5>Tom Harris</h5>
+                        <p>Good for organizing notes and collaborating with others, but the syncing is sometimes unreliable.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Rachel Scott">
+                    <div class="review-content">
+                        <h5>Rachel Scott</h5>
+                        <p>Love the drawing and note-taking features, but the search function could be more intuitive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trello -->
+        <div class="app-box">
+            <img src="https://img.utdstc.com/icon/b34/f31/b34f31986c7b0aabeb11e54b2e6985c6958d4e0f64a01ab10eafc8ede2a517ff:200" alt="Trello">
+            <h4>Trello</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Chris Martinez">
+                    <div class="review-content">
+                        <h5>Chris Martinez</h5>
+                        <p>Great for project management and task tracking, though it can get cluttered with too many boards.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Patricia Miller">
+                    <div class="review-content">
+                        <h5>Patricia Miller</h5>
+                        <p>Perfect for organizing projects and teamwork, but the free version lacks advanced features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Keep -->
+        <div class="app-box">
+            <img src="https://www.google.com/images/icons/product/keep-512.png" alt="Google Keep">
+            <h4>Google Keep</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Steven Roberts">
+                    <div class="review-content">
+                        <h5>Steven Roberts</h5>
+                        <p>Quick and easy for taking notes on the go, but lacks more advanced organizational features.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Helen Davis">
+                    <div class="review-content">
+                        <h5>Helen Davis</h5>
+                        <p>Simple and fast, but it's not as feature-rich as some other note-taking apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            const apps = document.querySelectorAll('.app-box');
+            apps.forEach(app => {
+                const appName = app.querySelector('h4').textContent.toLowerCase();
+                if (appName.includes(searchQuery)) {
+                    app.style.display = '';
+                } else {
+                    app.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

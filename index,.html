@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        /* About TechLens Section */
+        .about {
+            padding: 100px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+        .about p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+        .about p span {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 50px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+        .reviews-section h2 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #333;
+        }
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .review-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #f0f0f0;
+            opacity: 0;
+            animation: fadeInReview 1s forwards;
+        }
+        .review-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .review-header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+        .review-header h4 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .review-content {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .review-footer {
+            font-size: 0.9em;
+            color: #888;
+            text-align: right;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-content p {
+            margin: 0;
+            font-size: 1em;
+        }
+        .social-media a {
+            color: white;
+            margin: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInReview {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sticky Navbar */
+        .navbar.sticky {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar with Logo -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+        <div>
+            <a href="gadjets.html">GADGETS</a>
+            <a href="apps.html">APPS</a>
+            <a href="software.html">SOFTWARE</a>
+            <a href="submitreview.html">SUBMIT REVIEW</a>
+        </div>
+    </div>
+
+    <!-- About TechLens Section -->
+    <div class="about">
+        <h2>Welcome to TechLens</h2>
+        <p>
+            Welcome to <span>TechLens</span>, your ultimate destination for unbiased and detailed reviews of tech products! 
+            Whether you're exploring the latest <span>gadgets</span>, comparing <span>software</span>, or searching for the best <span>apps</span>, 
+            we've got you covered. Read and submit reviews to help the tech community make informed decisions. Stay ahead in the world of technology!
+        </p>
+    </div>
+
+    <!-- User Reviews Section -->
+    <div class="reviews-section">
+        <h2>User Reviews</h2>
+        <div class="reviews-container">
+            <!-- Review 1 -->
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="user1">
+                    <h4>Amit Kumar</h4>
+                </div>
+                <div class="review-content">
+                    "The new mobile is amazing. I love its speed and design. The battery life is really good, and the camera quality is excellent!"
+                </div>
+                <div class="review-footer">5/5 stars</div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="user2">
+                    <h4>Aman Singh</h4>
+                </div>
+                <div class="review-content">
+                    "I recently viewed a smartwatch from here. It's been great so far. The features are really helpful, especially the health tracking."
+                </div>
+                <div class="review-footer">4/5 stars</div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="user3">
+                    <h4>Sneha Rani</h4>
+                </div>
+                <div class="review-content">
+                    "Awesome laptop! It’s fast, lightweight, and the battery lasts long. Perfect for work and entertainment."
+                </div>
+                <div class="review-footer">4.5/5 stars</div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="user4">
+                    <h4>Ravi Sharma</h4>
+                </div>
+                <div class="review-content">
+                    "I’m impressed with the earphones. The sound quality is crystal clear, and the noise cancellation feature works like a charm."
+                </div>
+                <div class="review-footer">5/5 stars</div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-box">
+                <div class="review-header">
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="user5">
+                    <h4>Neha Patel</h4>
+                </div>
+                <div class="review-content">
+                    "This gadget has been a game-changer for me! It's incredibly versatile and has all the features I need."
+                </div>
+                <div class="review-footer">5/5 stars</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>Connect with us:</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://x.com" target="_blank">
+                    <i class="fab fa-twitter"></i> X
+                </a>
+                <a href="https://www.linkedin.com/in/manas-srivastava-32254a328/" target="_blank">
+                    <i classx="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/manascse99" target="_blank">
+                    <i classx="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <p style="margin-top: 20px;">Address: KIET, Ghaziabad, 201206</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome Icons for Social Media -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Video Editing Software - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for video editing software..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Video Editing Software Section -->
+    <h2 class="section-title">Top Video Editing Software</h2>
+    <div class="apps-container" id="appsContainer">
+        <!-- Final Cut Pro -->
+        <div class="app-box">
+            <img src="https://i.pcmag.com/imagery/reviews/00FaQZAwQoZwxbFpiehSYlN-89..v1664825772.png" alt="Final Cut Pro">
+            <h4>Final Cut Pro</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Aditya Kumar">
+                    <div class="review-content">
+                        <h5>Aditya Kumar</h5>
+                        <p>A powerful tool for professional video editing, perfect for Apple users.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Riya Kapoor">
+                    <div class="review-content">
+                        <h5>Riya Kapoor</h5>
+                        <p>Excellent performance and great features for high-end projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DaVinci Resolve -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXDLZERcifqofS4petTsYB3pihbtJ5eD8MUw&s" alt="DaVinci Resolve">
+            <h4>DaVinci Resolve</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Vikram Sharma">
+                    <div class="review-content">
+                        <h5>Vikram Sharma</h5>
+                        <p>Best for color grading and post-production editing. The free version is great!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Priya Das">
+                    <div class="review-content">
+                        <h5>Priya Das</h5>
+                        <p>Incredible editing suite with powerful features even in the free version.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Adobe Premiere Pro -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/1200px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Adobe Premiere Pro">
+            <h4>Adobe Premiere Pro</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Sahil Jain">
+                    <div class="review-content">
+                        <h5>Sahil Jain</h5>
+                        <p>Great for video editing with a vast array of tools for professionals.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Nisha Malik">
+                    <div class="review-content">
+                        <h5>Nisha Malik</h5>
+                        <p>Intuitive interface and seamless integration with other Adobe apps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HitFilm Express -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz3Jq4-jcn4ITiMp4n0HrSTUvS3xfZ4PzAgA&s" alt="HitFilm Express">
+            <h4>HitFilm Express</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Akshay Gupta">
+                    <div class="review-content">
+                        <h5>Akshay Gupta</h5>
+                        <p>Great free software with solid editing features and visual effects.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Pooja Rao">
+                    <div class="review-content">
+                        <h5>Pooja Rao</h5>
+                        <p>Perfect for beginners and enthusiasts with a great mix of features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- iMovie -->
+        <div class="app-box">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/64/17/75641791-4930-c11e-0b1e-a540e6b7376d/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/1200x630wa.png" alt="iMovie">
+            <h4>iMovie</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Ramesh Singh">
+                    <div class="review-content">
+                        <h5>Ramesh Singh</h5>
+                        <p>Great for simple editing, easy to use, and works well with Mac devices.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Anita Verma">
+                    <div class="review-content">
+                        <h5>Anita Verma</h5>
+                        <p>Excellent for quick edits and producing polished content on macOS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightworks -->
+        <div class="app-box">
+            <img src="https://styles.redditmedia.com/t5_2vi2g/styles/communityIcon_y12hbe3i59eb1.png" alt="Lightworks">
+            <h4>Lightworks</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Anil Patel">
+                    <div class="review-content">
+                        <h5>Anil Patel</h5>
+                        <p>Powerful professional editing tools, but can have a steep learning curve.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Komal Yadav">
+                    <div class="review-content">
+                        <h5>Komal Yadav</h5>
+                        <p>Great for professional use with high-level customization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sony Vegas Pro -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Vegas_Pro_21_logo.svg/1200px-Vegas_Pro_21_logo.svg.png" alt="Sony Vegas Pro">
+            <h4>Sony Vegas Pro</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Vishal Sharma">
+                    <div class="review-content">
+                        <h5>Vishal Sharma</h5>
+                        <p>Powerful software with amazing video editing capabilities for professionals.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Seema Rani">
+                    <div class="review-content">
+                        <h5>Seema Rani</h5>
+                        <p>Great for high-end video editing, and it has a lot of plugins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Avid Media Composer -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlL2Gd4U0FA01E0fzIAd7amNkDg4QKm02E4pVDuVaFyWnT0sQlxu5qrLCnG8NnVJHlPwM&usqp=CAU" alt="Avid Media Composer">
+            <h4>Avid Media Composer</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Rajesh Gupta">
+                    <div class="review-content">
+                        <h5>Rajesh Gupta</h5>
+                        <p>Industry-standard software used by top filmmakers. Excellent for large projects.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Sushma Mehta">
+                    <div class="review-content">
+                        <h5>Sushma Mehta</h5>
+                        <p>Excellent for professional film editing with lots of advanced tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterApps() {
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            const apps = document.querySelectorAll('.app-box');
+            
+            apps.forEach(app => {
+                const appName = app.querySelector('h4').textContent.toLowerCase();
+                if (appName.includes(searchQuery)) {
+                    app.style.display = 'block';
+                } else {
+                    app.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

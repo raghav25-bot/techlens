@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Watches - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .watches-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .watch-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .watch-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .watch-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for watches..."
+            onkeyup="filterWatches()"
+        >
+    </div>
+
+    <!-- Watches Section -->
+    <h2 class="section-title">Top Watches</h2>
+    <div class="watches-container" id="watchesContainer">
+        <!-- Apple Watches -->
+        <div class="watch-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzUXx3Aw89CcdauFC61saYnCZP6FIMPAs2oQ&s" alt="Apple Watch Series 9">
+            <h4>Apple Watch Series 9</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Amazing performance and design!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Very smooth and perfect for fitness tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-box">
+            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXTT3ref_VW_34FR+watch-case-49-titanium-natural-ultra2_VW_34FR+watch-face-49-trail-ultra2_VW_34FR_GEO_IN?wid=752&hei=720&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=Nmc3Z3VDZU5tSWtGTUh0STBHdXhFbmpDV2hhem5qNnpDenFtKzI1OXdzYkpncG05NXptdno5VmVNOFY1RGFaTE96dTRSSXdkWit3NnU2Q1orZWxLbVJjU2hUMWxocXcxbUF2c0Zrbk5pNWxQRFYxUUNxcXo1R1JmVUNGRExieW5lQmd0L3dGbTZoRzhHVWNnbzJ3Q2djKzNTbk5oNWNKTXhGZnI1Vm1GbjNSQUM0VzY0ZFZ0S21LTGc3Snk3TVBjOWE5RkJ2dEY1c1pRZkdGUUtnZHBSUXZSVnhvdlcwYzFyZG43STFrb1h0cw" alt="Apple Watch Ultra 2">
+            <h4>Apple Watch Ultra 2</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Best for adventurers and rugged use.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Great features but a bit heavy for me.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Samsung Watches -->
+        <div class="watch-box">
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2307/gallery/in-galaxy-watch6-classic-r955-sm-r950nzkains-537405934?$650_519_PNG$" alt="Samsung Galaxy Watch 6">
+            <h4>Samsung Galaxy Watch 6</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Great battery life and features.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>Superb fitness tracking capabilities!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-box">
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-398879-sm-r870nzkainu-thumb-481111392?$480_480_PNG$" alt="Samsung Galaxy Watch Active 4">
+            <h4>Samsung Galaxy Watch Active 4</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Sleek design and lightweight.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Good value for the price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Boat Watches -->
+        <div class="watch-box">
+            <img src="https://www.boat-lifestyle.com/cdn/shop/files/Xtend_Plus.380-removebg-preview.png?v=1687527441" alt="Boat Xtend Plus">
+            <h4>Boat Xtend Plus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Budget-friendly and durable.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Ritu Agarwal">
+                    <div class="review-content">
+                        <h5>Ritu Agarwal</h5>
+                        <p>Decent features for its price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        
+        <div class="watch-box">
+            <img src="https://www.reliancedigital.in/medias/Fire-Boltt-Gladiator-Smart-Watch-Ocean-Black-494351661-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3w0ODA5MnxpbWFnZS9qcGVnfGltYWdlcy9oZGMvaGY5LzEwMDg2MzM1ODczMDU0LmpwZ3xiMThjZjU0OTI3NDhlM2IwYjEwYTUxZjg2MWU0MTk2YjcyNzU3YjgyNjE4YWJkNjg3NWY5ZTY2YzIxNDhkNzRm" alt="Fire-Boltt Gladiator">
+            <h4>Fire-Boltt Gladiator</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Harish Mehta">
+                    <div class="review-content">
+                        <h5>Harish Mehta</h5>
+                        <p>Solid build and nice screen.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Amrita Rao">
+                    <div class="review-content">
+                        <h5>Amrita Rao</h5>
+                        <p>Fantastic health monitoring features!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Noise Watches -->
+        <div class="watch-box">
+            <img src="https://m.media-amazon.com/images/I/716uwK-9vDL.jpg" alt="Noise ColorFit Ultra 3">
+            <h4>Noise ColorFit Ultra 3</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Nilesh Singh">
+                    <div class="review-content">
+                        <h5>Nilesh Singh</h5>
+                        <p>Awesome design and display!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Rashmi Arora">
+                    <div class="review-content">
+                        <h5>Rashmi Arora</h5>
+                        <p>Lightweight and easy to use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="watch-box">
+            <img src="https://m.media-amazon.com/images/I/71g09REHnkL.jpg" alt="NoiseFit Halo">
+            <h4>NoiseFit Halo</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Abhay Verma">
+                    <div class="review-content">
+                        <h5>Abhay Verma</h5>
+                        <p>Great features for professionals.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Ananya Bansal">
+                    <div class="review-content">
+                        <h5>Ananya Bansal</h5>
+                        <p>Love the vibrant display!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterWatches() {
+            const searchInput = document.getElementById("searchBar").value.toLowerCase();
+            const watches = document.querySelectorAll(".watch-box");
+
+            watches.forEach((watch) => {
+                const watchName = watch.querySelector("h4").textContent.toLowerCase();
+                if (watchName.includes(searchInput)) {
+                    watch.style.display = "block";
+                } else {
+                    watch.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

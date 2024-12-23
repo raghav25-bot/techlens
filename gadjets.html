@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadgets - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        .gadgets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gadget-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+        .gadget-box:hover {
+            transform: scale(1.05); /* Slightly enlarge the box on hover */
+        }
+        .gadget-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .gadget-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .gadget-box p {
+            color: #555;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        .gadget-box a {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .gadget-box a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar with Logo -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+        <div>
+            <a href="gadjets.html">GADGETS</a>
+            <a href="apps.html">APPS</a>
+            <a href="software.html">SOFTWARE</a>
+            <a href="submitreview.html">SUBMIT REVIEW</a>
+        </div>
+    </div>
+
+    <!-- Gadgets Section -->
+    <h2 class="section-title">Gadgets</h2>
+    <div class="gadgets-container">
+        <!-- Mobile Gadget -->
+        <div class="gadget-box">
+            <img src="https://images.ctfassets.net/evnrpfa1vdk4/5uEBpQYNzN79LH1qC67DSv/afd73de086834bd1e73c27615d1656dd/iPhone_16_Pro_Max_Desert_Titanium_Pure_Back_iPhone_16_Pro_Max_Desert_Titanium_Pure_Front_2-up_Screen__USEN.png" alt="Mobile">
+            <h4>Mobile</h4>
+            <p>The latest smartphones with cutting-edge features.</p>
+            <a href="mobilegadjets.html">Explore</a>
+        </div>
+
+        <!-- Laptop Gadget -->
+        <div class="gadget-box">
+            <img src="https://www.apple.com/newsroom/images/2024/10/new-macbook-pro/article/Apple-MacBook-Pro-M4-lineup_big.jpg.large.jpg" alt="Laptop">
+            <h4>Laptop</h4>
+            <p>Top-of-the-line laptops for work and play.</p>
+            <a href="laptopgadjets.html">Explore</a>
+        </div>
+
+        <!-- Watch Gadget -->
+        <div class="gadget-box">
+            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXLE3ref_VW_34FR+watch-case-42-aluminum-silver-nc-s10_VW_34FR+watch-face-42-aluminum-silver-s10_VW_34FR?wid=752&hei=720&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=eHNxZU9FeDNlL1UzSkRlOEtjUnU3cDNqbENGcEFFTlJVaXJwL2VzdGxEMUljRjVjb3RBRUI2RzdxR2VyMW04MktiMHlsanRialdTdDcyc1VBUDljMWJTdjdWZDZNTDA2YVdIMWltQk5rSVFzcXlqRnhOVXRDb09ITlB0dmMxa3IxRWcxcFNUbllKRGY4Szh6MTVJZ1N3RURuRVoxZjBkWlAvNkMrbU5jNUFLT0lodkdNeWd3SHAzZlUzNms5S2kxYTV3ZHB6VUg0cXhiSFFkSkkrM2ZpOFE4WFRnaDN2Z0ZCTmd2bjl6SlZhbw" alt="Watch">
+            <h4>Watch</h4>
+            <p>Stylish and functional smartwatches for all.</p>
+            <a href="watchgadjets.html">Explore</a>
+        </div>
+
+        <!-- Earphones Gadget -->
+        <div class="gadget-box">
+            <img src="https://m.media-amazon.com/images/I/51P6K-oiu1L._AC_UF1000,1000_QL80_.jpg" alt="Earphones">
+            <h4>Earphones</h4>
+            <p>High-quality earphones for music lovers.</p>
+            <a href="wiresearphones.html">Explore</a>
+        </div>
+
+        <!-- Headphones Gadget -->
+        <div class="gadget-box">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/airpods-max-select-202409-purple_FV1_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=1725492894417" alt="Headphones">
+            <h4>Headphones</h4>
+            <p>Noise-cancelling headphones for a better sound experience.</p>
+            <a href="headphonesgadjets.html">Explore</a>
+        </div>
+
+        <!-- Mouse Gadget -->
+        <div class="gadget-box">
+            <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MXK53?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1728939669364" alt="Mouse">
+            <h4>Mouse</h4>
+            <p>Ergonomic mice for productivity and comfort.</p>
+            <a href="mousegadjets.html">Explore</a>
+        </div>
+
+        <!-- Keyboard Gadget -->
+        <div class="gadget-box">
+            <img src="https://www.maplestore.in/cdn/shop/files/MK2C3.jpg?v=1702561156" alt="Keyboard">
+            <h4>Keyboard</h4>
+            <p>Mechanical and wireless keyboards for all needs.</p>
+            <a href="keyboardgadjet.html">Explore</a>
+        </div>
+
+        <!-- Tablet Gadget -->
+        <div class="gadget-box">
+            <img src="https://inventstore.in/wp-content/uploads/2024/05/35.png" alt="Tablet">
+            <h4>Tablet</h4>
+            <p>Tablets for work, creativity, and entertainment.</p>
+            <a href="tabletgadjet.html">Explore</a>
+        </div>
+
+        
+    </div>
+
+</body>
+</html>

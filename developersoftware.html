@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Developer Software - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for developer software..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Developer Software Section -->
+    <h2 class="section-title">Top Developer Software</h2>
+    <div class="apps-container" id="appsContainer">
+
+        <!-- Visual Studio Code -->
+        <div class="app-box">
+            <img src="https://code.visualstudio.com/favicon.ico" alt="Visual Studio Code">
+            <h4>Visual Studio Code</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="John Doe">
+                    <div class="review-content">
+                        <h5>John Doe</h5>
+                        <p>Excellent editor for web development, with tons of extensions available.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Jane Smith">
+                    <div class="review-content">
+                        <h5>Jane Smith</h5>
+                        <p>Fast and lightweight, but sometimes the extensions can slow it down.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- IntelliJ IDEA -->
+        <div class="app-box">
+            <img src="https://yt3.googleusercontent.com/paSsnUNkXmv4O8OnUvjDv1_Vb35kMmnXwosWU7C-idBsqm-xt_NA1XzjZ_Nrmfa1zkMEbr5SqQ=s900-c-k-c0x00ffffff-no-rj" alt="IntelliJ IDEA">
+            <h4>IntelliJ IDEA</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="David Lee">
+                    <div class="review-content">
+                        <h5>David Lee</h5>
+                        <p>Perfect for Java development, but the premium version is quite expensive.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Emily Johnson">
+                    <div class="review-content">
+                        <h5>Emily Johnson</h5>
+                        <p>Great for large projects, but takes a lot of resources on my system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sublime Text -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Sublime_Text_3_logo.png" alt="Sublime Text">
+            <h4>Sublime Text</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Michael Brown">
+                    <div class="review-content">
+                        <h5>Michael Brown</h5>
+                        <p>Fast and efficient, but some features are hidden behind a paywall.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Sarah Taylor">
+                    <div class="review-content">
+                        <h5>Sarah Taylor</h5>
+                        <p>Lightweight and powerful, but lacks some advanced features compared to other IDEs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PyCharm -->
+        <div class="app-box">
+            <img src="https://storage.caktusgroup.com/media/blog-images/logo.png" alt="PyCharm">
+            <h4>PyCharm</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Mark Wilson">
+                    <div class="review-content">
+                        <h5>Mark Wilson</h5>
+                        <p>Best for Python development, but can be a bit slow for large projects.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Linda Green">
+                    <div class="review-content">
+                        <h5>Linda Green</h5>
+                        <p>Great support for Python libraries, but the interface feels cluttered sometimes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Xcode -->
+<div class="app-box">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/b1/58/2fb15811-5b85-6fe8-fcd9-7c5d850afffe/Xcode-85-220-0-4-2x-sRGB.png/1200x630bb.png" alt="Xcode">
+    <h4>Xcode</h4>
+    <div class="reviews-container">
+        <div class="review-box">
+            <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Chris Johnson">
+            <div class="review-content">
+                <h5>Chris Johnson</h5>
+                <p>Essential for iOS and macOS development. It’s comprehensive, but can be heavy on system resources.</p>
+            </div>
+        </div>
+        <div class="review-box">
+            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Megan Lee">
+            <div class="review-content">
+                <h5>Megan Lee</h5>
+                <p>Great for building Apple applications, but I wish it were more lightweight and responsive.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Atom -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi4qsrXhza6Z_5QFj53iKBg2v4DiYSO4fShg&s" alt="Atom">
+            <h4>Atom</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Tom Harris">
+                    <div class="review-content">
+                        <h5>Tom Harris</h5>
+                        <p>Open-source and customizable, but can be slow with large files.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="Rachel Adams">
+                    <div class="review-content">
+                        <h5>Rachel Adams</h5>
+                        <p>Highly extensible, but the performance could be better.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NetBeans -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/800px-Apache_NetBeans_Logo.svg.png" alt="NetBeans">
+            <h4>NetBeans</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="James Martinez">
+                    <div class="review-content">
+                        <h5>James Martinez</h5>
+                        <p>Good for Java, but lacks support for some modern languages.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Olivia Evans">
+                    <div class="review-content">
+                        <h5>Olivia Evans</h5>
+                        <p>Easy to use and lightweight, but has fewer features than competitors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eclipse -->
+        <div class="app-box">
+            <img src="https://foojay.io/wp-content/uploads/2021/03/eclipse-logo.png" alt="Eclipse">
+            <h4>Eclipse</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Benjamin Scott">
+                    <div class="review-content">
+                        <h5>Benjamin Scott</h5>
+                        <p>Great for Java development, but it feels heavy and can slow down.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="Chloe Moore">
+                    <div class="review-content">
+                        <h5>Chloe Moore</h5>
+                        <p>Very customizable, but the setup can be confusing for beginners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2024 TechLens. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function filterApps() {
+            let input = document.getElementById("searchBar");
+            let filter = input.value.toLowerCase();
+            let appsContainer = document.getElementById("appsContainer");
+            let appBoxes = appsContainer.getElementsByClassName("app-box");
+
+            for (let i = 0; i < appBoxes.length; i++) {
+                let appName = appBoxes[i].getElementsByTagName("h4")[0];
+                if (appName) {
+                    let txtValue = appName.textContent || appName.innerText;
+                    if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                        appBoxes[i].style.display = "";
+                    } else {
+                        appBoxes[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

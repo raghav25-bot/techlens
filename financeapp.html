@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Finance Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for finance apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Finance Apps Section -->
+    <h2 class="section-title">Top Finance Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- Mint -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/xb5kyKVpbNeeJlx3bKlUPcF_vJH6sel0c3FlyZ_KNx2cZtjEj-1pGGYOLHa-39LlXnY=w240-h480-rw" alt="Mint">
+            <h4>Super Money</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Vikram Kumar">
+                    <div class="review-content">
+                        <h5>Vikram Kumar</h5>
+                        <p>Helps me keep track of my spending and budgeting effortlessly.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Anjali Verma">
+                    <div class="review-content">
+                        <h5>Anjali Verma</h5>
+                        <p>Great for managing finances and planning for future goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paytm -->
+        <div class="app-box">
+            <img src="https://cdn.icon-icons.com/icons2/730/PNG/512/paytm_icon-icons.com_62778.png" alt="Paytm">
+            <h4>Paytm</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Ravi Singh">
+                    <div class="review-content">
+                        <h5>Ravi Singh</h5>
+                        <p>Convenient for all types of online payments and recharge.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Priya Rao">
+                    <div class="review-content">
+                        <h5>Priya Rao</h5>
+                        <p>Quick transactions and easy wallet management!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PhonePe -->
+        <div class="app-box">
+            <img src="https://static.vecteezy.com/system/resources/previews/049/116/753/non_2x/phonepe-app-icon-transparent-background-free-png.png" alt="PhonePe">
+            <h4>PhonePe</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Amit Sharma">
+                    <div class="review-content">
+                        <h5>Amit Sharma</h5>
+                        <p>Fast, easy to use, and reliable for all payments.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Geeta Yadav">
+                    <div class="review-content">
+                        <h5>Geeta Yadav</h5>
+                        <p>The app makes transactions so simple and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Pay -->
+        <div class="app-box">
+            <img src="https://www.computerhope.com/jargon/g/google-pay.png" alt="Google Pay">
+            <h4>Google Pay</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Kunal Gupta">
+                    <div class="review-content">
+                        <h5>Kunal Gupta</h5>
+                        <p>Great app for transferring money and paying bills instantly.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Simran Kaur">
+                    <div class="review-content">
+                        <h5>Simran Kaur</h5>
+                        <p>Fast, secure, and hassle-free money transfers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Robinhood -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSbpWz8SUrRq7EZL-tE73XEN-oSUPFgA3KQ&s" alt="money tracker">
+            <h4>Money Tracker</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Sandeep Mehta">
+                    <div class="review-content">
+                        <h5>Sandeep Mehta</h5>
+                        <p>Perfect app for beginners to start investing!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Rina Sharma">
+                    <div class="review-content">
+                        <h5>Rina Sharma</h5>
+                        <p>Easy to use, and the commission-free trades are a bonus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cash App -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Square_Cash_app_logo.svg/1200px-Square_Cash_app_logo.svg.png" alt="Cash App">
+            <h4>Cash App</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Vishal Tiwari">
+                    <div class="review-content">
+                        <h5>Vishal Tiwari</h5>
+                        <p>Great for sending money to friends and family quickly.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Neelam Desai">
+                    <div class="review-content">
+                        <h5>Neelam Desai</h5>
+                        <p>The Cash App is my go-to for mobile payments and savings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Truebill -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdLeCODE5Kfq5yK6G3aCJilkzkblhhHx9-1A&s" alt="Truebill">
+            <h4>Truebill</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Mohan Das">
+                    <div class="review-content">
+                        <h5>Mohan Das</h5>
+                        <p>Helps me manage subscriptions and cut down on unnecessary expenses.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Kavita Reddy">
+                    <div class="review-content">
+                        <h5>Kavita Reddy</h5>
+                        <p>Great app for tracking monthly bills and expenses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acorns -->
+        <div class="app-box">
+            <img src="https://cdn.dribbble.com/userupload/2347410/file/original-e71a15b916bf1cafafcfb88b6d7aab25.png?resize=400x0" alt="Acorns">
+            <h4>Acorns</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Rohan Patel">
+                    <div class="review-content">
+                        <h5>Rohan Patel</h5>
+                        <p>Perfect for investing spare change and building savings.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Ananya Iyer">
+                    <div class="review-content">
+                        <h5>Ananya Iyer</h5>
+                        <p>Great for beginners looking to get into investing with minimal effort.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const apps = document.querySelectorAll(".app-box");
+            apps.forEach(app => {
+                const appName = app.querySelector("h4").textContent.toLowerCase();
+                if (appName.includes(query)) {
+                    app.style.display = "block";
+                } else {
+                    app.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Mobiles - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .mobiles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .mobile-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .mobile-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .mobile-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for mobiles..."
+            onkeyup="filterMobiles()"
+        >
+    </div>
+
+    <!-- Mobile Section -->
+    <h2 class="section-title">Top Mobiles</h2>
+    <div class="mobiles-container" id="mobilesContainer">
+        <!-- Apple Mobiles -->
+        <div class="mobile-box">
+            <img src="https://images.ctfassets.net/evnrpfa1vdk4/5uEBpQYNzN79LH1qC67DSv/afd73de086834bd1e73c27615d1656dd/iPhone_16_Pro_Max_Desert_Titanium_Pure_Back_iPhone_16_Pro_Max_Desert_Titanium_Pure_Front_2-up_Screen__USEN.png" alt="Apple iPhone 15 Pro">
+            <h4>Apple iPhone 15 Pro</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Aarav Sharma">
+                    <div class="review-content">
+                        <h5>Aarav Sharma</h5>
+                        <p>Excellent phone with outstanding performance!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Meera Kapoor">
+                    <div class="review-content">
+                        <h5>Meera Kapoor</h5>
+                        <p>Great camera quality, worth the price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-box">
+            <img src="https://www.imagineonline.store/cdn/shop/files/iPhone_16_Teal_PDP_Image_Position_1__en-IN_a1fc96e6-04cc-4c8a-8f9b-f22f27088bc6.jpg?v=1727247742" alt="Apple iPhone SE">
+            <h4>Apple iPhone 16</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Raj Malhotra">
+                    <div class="review-content">
+                        <h5>Raj Malhotra</h5>
+                        <p>Compact size with premium features!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Priya Verma">
+                    <div class="review-content">
+                        <h5>Priya Verma</h5>
+                        <p>Value for money, highly recommend it!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Google Pixel -->
+                <div class="mobile-box">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/q/b/g/-original-imah3zznscgh3fgk.jpeg?q=90&crop=false" alt="Google Pixel 8 Pro">
+                    <h4>Google Pixel 9 Pro</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Aditya Mehta">
+                            <div class="review-content">
+                                <h5>Aditya Mehta</h5>
+                                <p>Incredible camera, AI features are game-changers!</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Kavya Iyer">
+                            <div class="review-content">
+                                <h5>Kavya Iyer</h5>
+                                <p>Clean software experience with regular updates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- OnePlus -->
+                <div class="mobile-box">
+                    <img src="https://m.media-amazon.com/images/I/71XNeka-BRL.jpg" alt="OnePlus 12">
+                    <h4>OnePlus 12 R</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Siddharth Roy">
+                            <div class="review-content">
+                                <h5>Siddharth Roy</h5>
+                                <p>Top-notch performance and premium design.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Ananya Gupta">
+                            <div class="review-content">
+                                <h5>Ananya Gupta</h5>
+                                <p>Warp charging is incredibly fast, love it!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+        <!-- Samsung Mobiles -->
+        <div class="mobile-box">
+            <img src="https://i.gadgets360cdn.com/products/large/galaxy-s24-ultra-797x800-1705519965.jpg" alt="Samsung Galaxy S23 Ultra">
+            <h4>Samsung Galaxy S24 Ultra</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Ankit Gupta">
+                    <div class="review-content">
+                        <h5>Ankit Gupta</h5>
+                        <p>Superb display and long battery life.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Simran Kaur">
+                    <div class="review-content">
+                        <h5>Simran Kaur</h5>
+                        <p>Amazing for gaming and multitasking!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-box">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/mobile/t/0/g/-original-imah4zp7fvqp8wev.jpeg?q=90&crop=false" alt="Samsung Galaxy A54">
+            <h4>Samsung Galaxy S23</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Neha Joshi">
+                    <div class="review-content">
+                        <h5>Neha Joshi</h5>
+                        <p>Affordable phone with great performance.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Rohit Singh">
+                    <div class="review-content">
+                        <h5>Rohit Singh</h5>
+                        <p>Excellent battery backup!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Motorola Mobiles -->
+        <div class="mobile-box">
+            <img src="https://www.jiomart.com/images/product/original/rvuc1jjtop/motorola-edge-50-fusion-forest-blue-256-gb-12-gb-ram-justhere-product-images-orvuc1jjtop-p609060512-2-202405241233.jpg?im=Resize=(420,420)" alt="Motorola Edge 40">
+            <h4>Motorola Edge 50 FUSION</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vishal Reddy">
+                    <div class="review-content">
+                        <h5>Vishal Reddy</h5>
+                        <p>Great value for money, solid performance.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Sanya Patel">
+                    <div class="review-content">
+                        <h5>Sanya Patel</h5>
+                        <p>Good phone but could improve camera quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vivo Mobiles -->
+        <div class="mobile-box">
+            <img src="https://28mobile.com/cdn/shop/files/vivo_x100_pro-b-1_grande@2x.jpg?v=1701943125" alt="Vivo X100 Pro">
+            <h4>Vivo X100 Pro</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Ravi Kumar">
+                    <div class="review-content">
+                        <h5>Rav i Kumar</h5>
+                        <p>Great phone for photography enthusiasts.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Tina Shah">
+                    <div class="review-content">
+                        <h5>Tina Shah</h5>
+                        <p>Perfect for everyday use and gaming.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterMobiles() {
+            const searchInput = document.getElementById("searchBar").value.toLowerCase();
+            const mobiles = document.querySelectorAll(".mobile-box");
+
+            mobiles.forEach((mobile) => {
+                const mobileName = mobile.querySelector("h4").textContent.toLowerCase();
+                if (mobileName.includes(searchInput)) {
+                    mobile.style.display = "block";
+                } else {
+                    mobile.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

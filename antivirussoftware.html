@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Antivirus Software - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for antivirus software..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Antivirus Software Section -->
+    <h2 class="section-title">Top Antivirus Software</h2>
+    <div class="apps-container" id="appsContainer">
+
+        <!-- Quick Heal Antivirus -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ_F4ggBW71bTlEksPilEmH2zSVjEYGdIaHg&s" alt="Quick Heal">
+            <h4>Quick Heal Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="User17">
+                    <div class="review-content">
+                        <h5>Rajesh Yadav</h5>
+                        <p>Quick Heal offers great protection against viruses, but the UI could use some improvement.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="User18">
+                    <div class="review-content">
+                        <h5>Simran Chauhan</h5>
+                        <p>Good antivirus with decent system performance, but it sometimes slows down while scanning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESET NOD32 Antivirus -->
+        <div class="app-box">
+            <img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxqlzhSacvvL_freCwtE7HtS7z1rLpel31DTFykE10.JjpX4JOQ_7RgN6oO.B40PJzZeNnPBNCziiw8rcScPLXlQ-&format=source" alt="ESET NOD32">
+            <h4>ESET NOD32 Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="User19">
+                    <div class="review-content">
+                        <h5>Prakash Mishra</h5>
+                        <p>ESET NOD32 provides excellent protection with minimal system impact. However, it’s not very intuitive.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/20.jpg" alt="User20">
+                    <div class="review-content">
+                        <h5>Geeta Rani</h5>
+                        <p>Solid security features, but I find the installation process a bit cumbersome.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Norton Antivirus -->
+        <div class="app-box">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/6/319330374/FW/XV/EZ/191607816/norton-antivirus-software-service.jpg" alt="Norton Antivirus">
+            <h4>Norton Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="User21">
+                    <div class="review-content">
+                        <h5>Sunil Verma</h5>
+                        <p>Excellent protection, but the subscription renewal process is complicated.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="User22">
+                    <div class="review-content">
+                        <h5>Aditi Patel</h5>
+                        <p>Has a great firewall, but the interface could be more user-friendly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Avast Antivirus -->
+        <div class="app-box">
+            <img src="https://i.pcmag.com/imagery/reviews/056zLbrnoQ6RtqFh9qBuDhJ-62..v1712937121.png" alt="Avast Antivirus">
+            <h4>Avast Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/23.jpg" alt="User23">
+                    <div class="review-content">
+                        <h5>Ravi Kumar</h5>
+                        <p>Avast offers great free protection, but the premium version is overpriced for what it offers.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="User24">
+                    <div class="review-content">
+                        <h5>Priya Rani</h5>
+                        <p>Works well with minimal system resources, but I have faced issues with software conflicts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kaspersky Antivirus -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQslZyz7s6VVPvbS5zVIeOd_J_N9vmqx3kIQ&s" alt="Kaspersky Antivirus">
+            <h4>Kaspersky Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/25.jpg" alt="User25">
+                    <div class="review-content">
+                        <h5>Manoj Sinha</h5>
+                        <p>Reliable antivirus, but sometimes the scan takes too long to complete.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="User26">
+                    <div class="review-content">
+                        <h5>Anjali Sharma</h5>
+                        <p>Great malware protection and a fast system scan. But it can be a bit slow when using other features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- McAfee Antivirus -->
+        <div class="app-box">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2022/1/IW/FH/KZ/77642205/antivirus-software-500x500.png" alt="McAfee Antivirus">
+            <h4>McAfee Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/27.jpg" alt="User27">
+                    <div class="review-content">
+                        <h5>Vikas Singh</h5>
+                        <p>McAfee offers great protection, but I’ve noticed it can slow down my system.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="User28">
+                    <div class="review-content">
+                        <h5>Shalini Yadav</h5>
+                        <p>Easy to use and offers decent protection, but it tends to be a bit heavy on system resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bitdefender Antivirus -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/tL3Ii6vPXxDTGKds9HZT2uaOQuVOi6VDQnEZjCE4YuZQfcn0gXWd3l_d-NSfkvRH_p0" alt="Bitdefender Antivirus">
+            <h4>Bitdefender Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="User29">
+                    <div class="review-content">
+                        <h5>Deepak Kumar</h5>
+                        <p>Bitdefender is great for protection, but the free version is quite limited.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="User30">
+                    <div class="review-content">
+                        <h5>Rina Soni</h5>
+                        <p>Offers great protection with a user-friendly interface. One of the best antiviruses out there.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sophos Antivirus -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTncMjlRhuVwxgwDsCgvh2qXmSSSx5GTK5BrA&s" alt="Sophos Antivirus">
+            <h4>Sophos Antivirus</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="User31">
+                    <div class="review-content">
+                        <h5>Amit Kumar</h5>
+                        <p>Sophos offers great enterprise-level protection, but not as many features for personal users.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User32">
+                    <div class="review-content">
+                        <h5>Neha Mehta</h5>
+                        <p>Effective protection against ransomware, but it can be a bit heavy on system resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            var input, filter, appsContainer, apps, appBox, appName, i, txtValue;
+            input = document.getElementById('searchBar');
+            filter = input.value.toLowerCase();
+            appsContainer = document.getElementById("appsContainer");
+            apps = appsContainer.getElementsByClassName('app-box');
+
+            for (i = 0; i < apps.length; i++) {
+                appBox = apps[i];
+                appName = appBox.getElementsByTagName("h4")[0];
+                txtValue = appName.textContent || appName.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    appBox.style.display = "";
+                } else {
+                    appBox.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

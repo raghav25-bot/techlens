@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Gaming Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for gaming apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Gaming Apps Section -->
+    <h2 class="section-title">Top Gaming Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- PUBG Mobile -->
+        <div class="app-box">
+            <img src="https://cdn6.aptoide.com/imgs/e/b/e/ebe4c3a3d00e00e9b26d18fcde77a3b6_icon.png" alt="PUBG Mobile">
+            <h4>PUBG Mobile</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Amit Raj">
+                    <div class="review-content">
+                        <h5>Amit Raj</h5>
+                        <p>The best battle royale game with great graphics and gameplay.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Neha Yadav">
+                    <div class="review-content">
+                        <h5>Neha Yadav</h5>
+                        <p>Intense and fun! Perfect for playing with friends.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call of Duty: Mobile -->
+        <div class="app-box">
+            <img src="https://cdn.app-parks.com/apps/app/images/appicons/63749754-e67c-4ae2-932a-03d8bd4c3140.png" alt="Call of Duty: Mobile">
+            <h4>Call of Duty: Mobile</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Ravi Kumar">
+                    <div class="review-content">
+                        <h5>Ravi Kumar</h5>
+                        <p>Excellent FPS with great maps and weapons!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Simran Reddy">
+                    <div class="review-content">
+                        <h5>Simran Reddy</h5>
+                        <p>Fun multiplayer and intense firefights.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Free Fire -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/jft5dckkhc_7hjsZBgEorUA6C3jUxkjYhEIR6R-WFMaeKvvd8DVtDXQj1O6Dit7bj9s" alt="Free Fire">
+            <h4>Free Fire</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Sahil Mehra">
+                    <div class="review-content">
+                        <h5>Sahil Mehra</h5>
+                        <p>A great alternative to PUBG Mobile with fast-paced action.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Priya Kapoor">
+                    <div class="review-content">
+                        <h5>Priya Kapoor</h5>
+                        <p>Fast matches and fun, easy to play on lower-end devices!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clash Royale -->
+        <div class="app-box">
+            <img src="https://cdna.artstation.com/p/assets/images/images/029/816/228/medium/brice-laville-saint-martin-app-icon-cr-2020.jpg?1692911026" alt="Clash Royale">
+            <h4>Clash Royale</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Karan Singh">
+                    <div class="review-content">
+                        <h5>Karan Singh</h5>
+                        <p>Great strategy game, love the card battles!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Joshi">
+                    <div class="review-content">
+                        <h5>Isha Joshi</h5>
+                        <p>Engaging and competitive, always a challenge!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Among Us -->
+        <div class="app-box">
+            <img src="https://img.icons8.com/?size=512&id=2PKUDFm57IKr&format=png" alt="Among Us">
+            <h4>Among Us</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Suresh Gupta">
+                    <div class="review-content">
+                        <h5>Suresh Gupta</h5>
+                        <p>Great game to play with friends! So much fun.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Ananya Sharma">
+                    <div class="review-content">
+                        <h5>Ananya Sharma</h5>
+                        <p>Perfect party game, keeps everyone on their toes!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subway Surfers -->
+        <div class="app-box">
+            <img src="https://cdna.artstation.com/p/assets/images/images/040/799/948/large/celine-j-icon-1024-ios.jpg?1629908087" alt="Subway Surfers">
+            <h4>Subway Surfers</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Rajesh Thakur">
+                    <div class="review-content">
+                        <h5>Rajesh Thakur</h5>
+                        <p>Timeless fun with great graphics and gameplay!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Meera Patel">
+                    <div class="review-content">
+                        <h5>Meera Patel</h5>
+                        <p>Simple and addictive! Great for short play sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brawl Stars -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3tL1V8-UuHARDOdL9JDjQgVYdFgnPcK_PXw&s" alt="Brawl Stars">
+            <h4>Brawl Stars</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Rohit Verma">
+                    <div class="review-content">
+                        <h5>Rohit Verma</h5>
+                        <p>A fast-paced game with different modes and heroes!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Sneha Iyer">
+                    <div class="review-content">
+                        <h5>Sneha Iyer</h5>
+                        <p>Super fun and action-packed multiplayer game.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const query = document.getElementById("searchBar").value.toLowerCase();
+            const apps = document.querySelectorAll(".app-box");
+            apps.forEach(app => {
+                const appName = app.querySelector("h4").textContent.toLowerCase();
+                if (appName.includes(query)) {
+                    app.style.display = "block";
+                } else {
+                    app.style.display = "none";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

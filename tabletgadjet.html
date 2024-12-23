@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Tablets - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .tablets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .tablet-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .tablet-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .tablet-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for tablets..."
+            onkeyup="filterTablets()"
+        >
+    </div>
+
+    <!-- Tablet Section -->
+    <h2 class="section-title">Top Tablets</h2>
+    <div class="tablets-container" id="tabletsContainer">
+        <!-- Apple iPad -->
+        <div class="tablet-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpiA2wtu5YXjyja7tAZVNMBogL4BLXGOhenw&s" alt="Apple iPad">
+            <h4>Apple iPad M4</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Aarav Sharma">
+                    <div class="review-content">
+                        <h5>Aarav Sharma</h5>
+                        <p>Sleek design, powerful performance, perfect for work and entertainment.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Meera Kapoor">
+                    <div class="review-content">
+                        <h5>Meera Kapoor</h5>
+                        <p>Great for watching movies and productivity tasks, but the price is high.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lenovo Tablet -->
+        <div class="tablet-box">
+            <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/09/Lenovo-Tab-P11-2nd-Gen--1024x841.jpg" alt="Lenovo Tablet">
+            <h4>Lenovo Tab P11</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Raj Malhotra">
+                    <div class="review-content">
+                        <h5>Raj Malhotra</h5>
+                        <p>Affordable and great for media consumption, but lacks performance for heavy apps.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Priya Verma">
+                    <div class="review-content">
+                        <h5>Priya Verma</h5>
+                        <p>Perfect for watching videos and light gaming, good value for money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Realme Tablet -->
+        <div class="tablet-box">
+            <img src="https://static.realme.net/v2/realme-pad/images/specs/bg-d502252f79.jpg" alt="Realme Tablet">
+            <h4>Realme Pad</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Ankit Gupta">
+                    <div class="review-content">
+                        <h5>Ankit Gupta</h5>
+                        <p>Great budget tablet with decent performance, but camera could be better.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Simran Kaur">
+                    <div class="review-content">
+                        <h5>Simran Kaur</h5>
+                        <p>Perfect for reading and light gaming, the display is vibrant and sharp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Huawei MatePad Pro -->
+                <div class="tablet-box">
+                    <img src="https://i.gadgets360cdn.com/large/huawei_matepad_pro_1723008968829.jpg" alt="Huawei MatePad Pro">
+                    <h4>Huawei MatePad Pro</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Amit Verma">
+                            <div class="review-content">
+                                <h5>Amit Verma</h5>
+                                <p>Impressive display and powerful performance, a great choice for multitasking.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Rina Gupta">
+                            <div class="review-content">
+                                <h5>Rina Gupta</h5>
+                                <p>Solid build, high-quality screen, but the software ecosystem needs work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Microsoft Surface Go 3 -->
+                <div class="tablet-box">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Panel5-f4b-SpinCarPoster?scl=1" alt="Microsoft Surface Go 3">
+                    <h4>Microsoft Surface Go 3</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Kunal Joshi">
+                            <div class="review-content">
+                                <h5>Kunal Joshi</h5>
+                                <p>Perfect for work on the go, lightweight, and has good overall performance.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Neha Patel">
+                            <div class="review-content">
+                                <h5>Neha Patel</h5>
+                                <p>Great for casual use and light productivity, but the battery life could be better.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Amazon Fire HD 10 -->
+                <div class="tablet-box">
+                    <img src="https://images-cdn.ubuy.co.in/633ff52621cfcd02d622645f-fire-hd-10-tablet-10-1-1080p-full.jpg" alt="Amazon Fire HD 10">
+                    <h4>Amazon Fire HD 10</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Deepak Mehta">
+                            <div class="review-content">
+                                <h5>Deepak Mehta</h5>
+                                <p>Good for media consumption, affordable, and the display is decent for the price.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Simran Kaur">
+                            <div class="review-content">
+                                <h5>Simran Kaur</h5>
+                                <p>Excellent budget tablet for reading, video streaming, and light browsing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+        <!-- Mi Tablet -->
+        <div class="tablet-box">
+            <img src="https://m.media-amazon.com/images/I/61Eb9vtdSML._AC_UF1000,1000_QL80_.jpg" alt="Mi Tablet">
+            <h4>Mi Pad 5</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Neha Joshi">
+                    <div class="review-content">
+                        <h5>Neha Joshi</h5>
+                        <p>Great tablet for the price, powerful performance and excellent display.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Rohit Singh">
+                    <div class="review-content">
+                        <h5>Rohit Singh</h5>
+                        <p>Perfect for watching movies and reading, battery life is impressive.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Samsung Galaxy Tab -->
+        <div class="tablet-box">
+            <img src="https://m.media-amazon.com/images/I/61HN1tOUymL.jpg" alt="Samsung Galaxy Tab">
+            <h4>Samsung Galaxy Tab S6</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vishal Kumar">
+                    <div class="review-content">
+                        <h5>Vishal Kumar</h5>
+                        <p>Premium design and display, but the price is on the higher side.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Sanya Sharma">
+                    <div class="review-content">
+                        <h5>Sanya Sharma</h5>
+                        <p>Ideal for productivity and entertainment, top-notch display and performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterTablets() {
+            const searchTerm = document.getElementById('searchBar').value.toLowerCase();
+            const tabletsContainer = document.getElementById('tabletsContainer');
+            const tabletBoxes = tabletsContainer.getElementsByClassName('tablet-box');
+            
+            Array.from(tabletBoxes).forEach((box) => {
+                const tabletName = box.querySelector('h4').textContent.toLowerCase();
+                if (tabletName.includes(searchTerm)) {
+                    box.style.display = 'block';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

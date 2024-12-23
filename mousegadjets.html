@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Mice - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .mice-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .mouse-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .mouse-box:hover {
+            transform: translateY(-5px); /* Lift the box slightly */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow for emphasis */
+        }
+        .mouse-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .mouse-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for mice..."
+            onkeyup="filterMice()"
+        >
+    </div>
+
+    <!-- Mice Section -->
+    <h2 class="section-title">Top Mouse</h2>
+    <div class="mice-container" id="miceContainer">
+        <!-- Apple Magic Mouse -->
+        <div class="mouse-box" data-name="Apple Magic Mouse">
+            <img src="https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1681400945/Croma%20Assets/Computers%20Peripherals/Computer%20Accessories%20and%20Tablets%20Accessories/Images/250021_0_yxiiwn.png?tr=w-600" alt="Apple Magic Mouse">
+            <h4>Apple Magic Mouse</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Sleek and elegant, perfect for Mac users!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Love the touch gestures, though pricey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logitech MX Master 3 -->
+        <div class="mouse-box" data-name="Logitech MX Master 3">
+            <img src="https://www.jiomart.com/images/product/original/491838023/logitech-mx-master-3-optical-wireless-mouse-digital-o491838023-p590042161-0-202010110138.jpeg?im=Resize=(420,420)" alt="Logitech MX Master 3">
+            <h4>Logitech MX Master 3</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Ergonomic design and great battery life!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Best productivity mouse ever!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Logitech G Pro X Superlight -->
+                <div class="mouse-box" data-name="Logitech G Pro X Superlight">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNWm7Mn_ODEwyCvMcdTCxodajsCd-l7F_6Iw&s" alt="Logitech G Pro X Superlight">
+                    <h4>Logitech G Pro X Superlight</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Arvind Mehra">
+                            <div class="review-content">
+                                <h5>Arvind Mehra</h5>
+                                <p>Super lightweight and incredibly responsive, a must-have for esports!</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Maya Singh">
+                            <div class="review-content">
+                                <h5>Maya Singh</h5>
+                                <p>Perfect for long gaming sessions, no hand fatigue at all.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- SteelSeries Rival 600 -->
+                <div class="mouse-box" data-name="SteelSeries Rival 600">
+                    <img src="https://m.media-amazon.com/images/I/31ADNjr2yxL._AC_.jpg" alt="SteelSeries Rival 600">
+                    <h4>SteelSeries Rival 600</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Sandeep Kumar">
+                            <div class="review-content">
+                                <h5>Sandeep Kumar</h5>
+                                <p>Great precision and customizability, the dual sensor system is awesome!</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Priya Rani">
+                            <div class="review-content">
+                                <h5>Priya Rani</h5>
+                                <p>Heavy but comfortable, the weight tuning is a fantastic feature.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Corsair Dark Core RGB/SE -->
+                <div class="mouse-box" data-name="Corsair Dark Core RGB/SE">
+                    <img src="https://m.media-amazon.com/images/I/61RdgVQ43TL._AC_UF1000,1000_QL80_.jpg" alt="Corsair Dark Core RGB/SE">
+                    <h4>Corsair Dark Core RGB/SE</h4>
+                    <div class="reviews-container">
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Rohit Arora">
+                            <div class="review-content">
+                                <h5>Rohit Arora</h5>
+                                <p>Fantastic build quality, great for both wired and wireless use.</p>
+                            </div>
+                        </div>
+                        <div class="review-box">
+                            <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Aarti Sharma">
+                            <div class="review-content">
+                                <h5>Aarti Sharma</h5>
+                                <p>The side grips and buttons feel great, perfect for my hand size.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+        <!-- HP Z3700 Wireless Mouse -->
+        <div class="mouse-box" data-name="HP Z3700 Wireless Mouse">
+            <img src="https://m.media-amazon.com/images/I/61C8wwzHb4L._AC_UF1000,1000_QL80_.jpg" alt="HP Z3700 Wireless Mouse">
+            <h4>HP Z3700 Wireless Mouse</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Slim and lightweight for travel.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>Good for casual users, decent connectivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dell MS116 Optical Mouse -->
+        <div class="mouse-box" data-name="Dell MS116 Optical Mouse">
+            <img src="https://m.media-amazon.com/images/I/51Mh6rU4VML.jpg" alt="Dell MS116 Optical Mouse">
+            <h4>Dell MS116 Optical Mouse</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Simple and reliable for office use.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Affordable and works like a charm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Razer DeathAdder V2 -->
+        <div class="mouse-box" data-name="Razer DeathAdder V2">
+            <img src="https://openboxstore.in/wp-content/uploads/2023/09/61doJ9AKCPL._SL1500_.jpg" alt="Razer DeathAdder V2">
+            <h4>Razer DeathAdder V2</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Vikram Reddy">
+                    <div class="review-content">
+                        <h5>Vikram Reddy</h5>
+                        <p>Great for gaming, responsive buttons.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Anjali Rao">
+                    <div class="review-content">
+                        <h5>Anjali Rao</h5>
+                        <p>Super smooth clicks, perfect for FPS games!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

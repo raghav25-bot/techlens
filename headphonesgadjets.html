@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Headphones - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .headphones-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .headphone-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .headphone-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .headphone-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for headphones..."
+            onkeyup="filterHeadphones()"
+        >
+    </div>
+
+    <!-- Headphones Section -->
+    <h2 class="section-title">Top Headphones</h2>
+    <div class="headphones-container" id="headphonesContainer">
+        <!-- Bose Headphones -->
+        <div class="headphone-box">
+            <img src="https://m.media-amazon.com/images/I/51qfLURUtpL._AC_UF1000,1000_QL80_.jpg" alt="Bose QuietComfort 45">
+            <h4>Bose QuietComfort 45</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Arun Mehta">
+                    <div class="review-content">
+                        <h5>Arun Mehta</h5>
+                        <p>Exceptional noise cancellation and comfort!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Neha Roy">
+                    <div class="review-content">
+                        <h5>Neha Roy</h5>
+                        <p>Perfect for long flights and music lovers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sony Headphones -->
+        <div class="headphone-box">
+            <img src="https://www.sony.co.in/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF" alt="Sony WH-1000XM5">
+            <h4>Sony WH-1000XM5</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rahul Patel">
+                    <div class="review-content">
+                        <h5>Rahul Patel</h5>
+                        <p>Unmatched audio quality and features!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Aditi Sharma">
+                    <div class="review-content">
+                        <h5>Aditi Sharma</h5>
+                        <p>Battery life is phenomenal. Highly recommend.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JBL Headphones -->
+        <div class="headphone-box">
+            <img src="https://m.media-amazon.com/images/I/61QZnJ+vJyL._AC_UF1000,1000_QL80_.jpg" alt="JBL Tune 760NC">
+            <h4>JBL Tune 760NC</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Suresh Yadav">
+                    <div class="review-content">
+                        <h5>Suresh Yadav</h5>
+                        <p>Budget-friendly with great sound quality.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Priya Das">
+                    <div class="review-content">
+                        <h5>Priya Das</h5>
+                        <p>Compact and easy to carry!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skullcandy Headphones -->
+        <div class="headphone-box">
+            <img src="https://m.media-amazon.com/images/I/61X3f7gfaPL._AC_UF1000,1000_QL80_.jpg" alt="Skullcandy Crusher Evo">
+            <h4>Skullcandy Crusher Evo</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Vijay Singh">
+                    <div class="review-content">
+                        <h5>Vijay Singh</h5>
+                        <p>Powerful bass with haptic feedback!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Anjali Verma">
+                    <div class="review-content">
+                        <h5>Anjali Verma</h5>
+                        <p>Battery lasts all day!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beats Headphones -->
+        <div class="headphone-box">
+            <img src="https://elcytec.com/wp-content/uploads/2024/07/elcytec_beats_studio_3_wireless_limited_edition_5.webp" alt="Beats Studio3">
+            <h4>Beats Studio3</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Raj Mehta">
+                    <div class="review-content">
+                        <h5>Raj Mehta</h5>
+                        <p>Trendy and stylish with good audio clarity.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Simran Gupta">
+                    <div class="review-content">
+                        <h5>Simran Gupta</h5>
+                        <p>Great for gym and workouts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boat Headphones -->
+        <div class="headphone-box">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/ksw4ccw0/headphone/w/g/r/rockerz-450-boat-original-imag6cqqh49wjfy5.jpeg?q=20&crop=false" alt="boAt Rockerz 450">
+            <h4>boAt Rockerz 450</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Karan Verma">
+                    <div class="review-content">
+                        <h5>Karan Verma</h5>
+                        <p>Best value for money!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Aisha Khan">
+                    <div class="review-content">
+                        <h5>Aisha Khan</h5>
+                        <p>Comfortable and lightweight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        function filterHeadphones() {
+            const searchInput = document.getElementById("searchBar").value.toLowerCase();
+            const products = document.querySelectorAll(".headphone-box");
+
+            products.forEach((product) => {
+                const productName = product.querySelector("h4").textContent.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

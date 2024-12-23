@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Microsoft Apps - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for Microsoft apps..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- Microsoft Apps Section -->
+    <h2 class="section-title">Top Microsoft Apps</h2>
+    <div class="apps-container" id="appsContainer">
+        
+        <!-- Microsoft Teams -->
+        <div class="app-box">
+            <img src="https://logos-world.net/wp-content/uploads/2021/04/Microsoft-Teams-Logo.png" alt="Microsoft Teams">
+            <h4>Microsoft Teams</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Rahul Mehta">
+                    <div class="review-content">
+                        <h5>Rahul Mehta</h5>
+                        <p>Great for video calls, especially for work meetings!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sara Khan">
+                    <div class="review-content">
+                        <h5>Sara Khan</h5>
+                        <p>Easy to use and seamless integration with Microsoft 365.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OneDrive -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv9jiusYpLPbmmUBk8TYIOXnNsDLgu6A5SHg&s" alt="OneDrive">
+            <h4>OneDrive</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Rajiv Roy">
+                    <div class="review-content">
+                        <h5>Rajiv Roy</h5>
+                        <p>Best cloud storage, I can access my files anywhere.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Neha Sharma">
+                    <div class="review-content">
+                        <h5>Neha Sharma</h5>
+                        <p>Syncs everything across devices and great for collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft Office Lens -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/ydTw_fsOTtosGmLEUlUH_l-rJoiE2gN_EYbneUPYwFqpOCj6orGRMffceZW0QHxbk5g" alt="Microsoft Office Lens">
+            <h4>Microsoft Office Lens</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Akash Patel">
+                    <div class="review-content">
+                        <h5>Akash Patel</h5>
+                        <p>Love scanning documents with clarity, and it automatically crops edges!</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="Pooja Verma">
+                    <div class="review-content">
+                        <h5>Pooja Verma</h5>
+                        <p>Convenient for capturing handwritten notes and converting them into text.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft Edge -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/VYvJqGnrQiKkbbyLyMeiL-GM3go4tBIA64uVEGQazLXD4p_M3F45kHyt42o_6d5VXA" alt="Microsoft Edge">
+            <h4>Microsoft Edge</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Arjun Das">
+                    <div class="review-content">
+                        <h5>Arjun Das</h5>
+                        <p>Fast, reliable, and my go-to browser for everything.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="Isha Gupta">
+                    <div class="review-content">
+                        <h5>Isha Gupta</h5>
+                        <p>Extensions make browsing so much easier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outlook -->
+        <div class="app-box">
+            <img src="https://cdn.jim-nielsen.com/ios/512/microsoft-outlook-2019-03-21.png?rf=1024" alt="Outlook">
+            <h4>Outlook</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Kunal Singh">
+                    <div class="review-content">
+                        <h5>Kunal Singh</h5>
+                        <p>Reliable and accurate email client with great integration.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="Rina Patil">
+                    <div class="review-content">
+                        <h5>Rina Patil</h5>
+                        <p>The best app for managing both personal and work emails efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            const searchBar = document.getElementById("searchBar");
+            const filter = searchBar.value.toUpperCase();
+            const appsContainer = document.getElementById("appsContainer");
+            const apps = appsContainer.getElementsByClassName("app-box");
+            
+            for (let i = 0; i < apps.length; i++) {
+                let appName = apps[i].getElementsByTagName("h4")[0].innerText;
+                if (appName.toUpperCase().indexOf(filter) > -1) {
+                    apps[i].style.display = "";
+                } else {
+                    apps[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

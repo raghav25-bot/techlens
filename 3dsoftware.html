@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 3D Modeling Software - TechLens</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar .logo span {
+            color: #007bff;
+        }
+        .search-bar-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .search-bar {
+            width: 50%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .app-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .app-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .app-box img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .app-box h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reviews-container {
+            margin-top: 20px;
+        }
+        .review-box {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .review-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .review-content {
+            text-align: left;
+        }
+        .review-content h5 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+        }
+        .review-content p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">TECH<span>LENS</span></a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input
+            type="text"
+            class="search-bar"
+            id="searchBar"
+            placeholder="Search for 3D modeling software..."
+            onkeyup="filterApps()"
+        >
+    </div>
+
+    <!-- 3D Modeling Software Section -->
+    <h2 class="section-title">Top 3D Modeling Software</h2>
+    <div class="apps-container" id="appsContainer">
+        <!-- Blender -->
+        <div class="app-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/512px-Blender_logo_no_text.svg.png" alt="Blender">
+            <h4>Blender</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User1">
+                    <div class="review-content">
+                        <h5>Rajat Singh</h5>
+                        <p>Blender is an amazing free software, perfect for animation and modeling. It has a steep learning curve but is incredibly powerful.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="User2">
+                    <div class="review-content">
+                        <h5>Ananya Sinha</h5>
+                        <p>Blender is awesome for 3D modeling and animation, but it can be overwhelming for beginners. Once you get the hang of it, it's extremely versatile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Autodesk Fusion 360 -->
+        <div class="app-box">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2023/5/309410296/QA/ZM/HH/64443040/fusion2-500x500.png" alt="Fusion 360">
+            <h4>Autodesk Fusion 360</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="User3">
+                    <div class="review-content">
+                        <h5>Vikas Gupta</h5>
+                        <p>Fusion 360 is fantastic for CAD, CAM, and 3D modeling. Great for product design, but the cloud-based storage can be a bit of a hassle.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="User4">
+                    <div class="review-content">
+                        <h5>Priyanka Sharma</h5>
+                        <p>Perfect for both beginners and professionals. The features are robust, but it requires a solid internet connection for cloud syncing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AutoCAD -->
+        <div class="app-box">
+            <img src="https://play-lh.googleusercontent.com/y92LD5c5rdlNfquCy-YPNIvdnS4ISEL05wickp28OLya8WlmWQwXfAP0Yys9iTssny3K" alt="AutoCAD">
+            <h4>AutoCAD</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="User5">
+                    <div class="review-content">
+                        <h5>Amar Patel</h5>
+                        <p>AutoCAD is a standard in the industry. It's great for drafting and technical design, but it's quite expensive for individual users.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/6.jpg" alt="User6">
+                    <div class="review-content">
+                        <h5>Sara Mehta</h5>
+                        <p>AutoCAD offers a great suite of tools, but the learning curve is steep for new users. Ideal for professionals, but not great for beginners.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SketchUp -->
+        <div class="app-box">
+            <img src="https://www.sketchupaustralia.com.au/wp-content/uploads/sketchup-2.png" alt="SketchUp">
+            <h4>SketchUp</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/7.jpg" alt="User7">
+                    <div class="review-content">
+                        <h5>Neeraj Kapoor</h5>
+                        <p>SketchUp is easy to learn and perfect for architectural designs. However, it lacks some advanced features for professional-grade modeling.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="User8">
+                    <div class="review-content">
+                        <h5>Neha Yadav</h5>
+                        <p>Great for beginners! The free version is quite capable, but the paid version offers more advanced tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ZBrush -->
+        <div class="app-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRoZWpGK5-hVO61TpZkwhVISkYjMmsHqMxzA&s" alt="ZBrush">
+            <h4>ZBrush</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="User9">
+                    <div class="review-content">
+                        <h5>Ravi Sharma</h5>
+                        <p>ZBrush is perfect for high-detail 3D modeling. It's great for sculpting, but it can be expensive for independent artists.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/10.jpg" alt="User10">
+                    <div class="review-content">
+                        <h5>Simran Kaur</h5>
+                        <p>ZBrush is excellent for creating detailed models and textures. However, it has a steep learning curve for new users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rhino -->
+        <div class="app-box">
+            <img src="https://img.freepik.com/premium-vector/rhino-logo_221218-9.jpg" alt="Rhino">
+            <h4>Rhino</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="User11">
+                    <div class="review-content">
+                        <h5>Amit Verma</h5>
+                        <p>Rhino is great for 3D design, especially in architecture. It's quite versatile, though the interface can feel a bit clunky.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="User12">
+                    <div class="review-content">
+                        <h5>Tanvi Sood</h5>
+                        <p>Very powerful for precision modeling. However, the cost can be prohibitive for hobbyists.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SolidWorks -->
+        <div class="app-box">
+            <img src="https://e7.pngegg.com/pngimages/613/563/png-clipart-red-and-white-sw-cube-illustration-solidworks-logo-computer-software-mechanical-engineering-cam-newton-miscellaneous-3d-computer-graphics-thumbnail.png" alt="SolidWorks">
+            <h4>SolidWorks</h4>
+            <div class="reviews-container">
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/men/13.jpg" alt="User13">
+                    <div class="review-content">
+                        <h5>Shivansh Tyagi</h5>
+                        <p>SolidWorks is excellent for engineering design and simulations. It's pricey but has all the features a professional needs.</p>
+                    </div>
+                </div>
+                <div class="review-box">
+                    <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="User14">
+                    <div class="review-content">
+                        <h5>Preeti Rani</h5>
+                        <p>Very powerful, but quite complex and not the most user-friendly software out there.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterApps() {
+            var input, filter, appsContainer, apps, appBox, appName, i, txtValue;
+            input = document.getElementById('searchBar');
+            filter = input.value.toLowerCase();
+            appsContainer = document.getElementById("appsContainer");
+            apps = appsContainer.getElementsByClassName('app-box');
+
+            for (i = 0; i < apps.length; i++) {
+                appBox = apps[i];
+                appName = appBox.getElementsByTagName("h4")[0];
+                txtValue = appName.textContent || appName.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    appBox.style.display = "";
+                } else {
+                    appBox.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

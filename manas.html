@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In / Sign Up - Thunderstorm Theme</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      height: 100vh;
+      overflow: hidden;
+      animation: background-flicker 3s infinite alternate;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #1e1e1e;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      color: #ffcc00;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: #ffcc00;
+      color: #121212;
+    }
+
+    .container {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      min-width: 800px;
+    }
+
+    .form-container {
+      background: #1e1e1e;
+      width: 100%;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+    }
+
+    .info-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .info-header h2 {
+      font-size: 1.5rem;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .info-header p {
+      font-size: 1rem;
+    }
+
+    .input-field input, button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      font-size: 1rem;
+      background: #333;
+      color: white;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #121212;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff9900;
+    }
+
+    /* Background Flicker Animation */
+    @keyframes background-flicker {
+      0% { background-color: #121212; }
+      100% { background-color: #0f0f0f; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Thunderstorm</h1>
+    <ul>
+      <li><a href="#sign-in" id="nav-sign-in">Sign In</a></li>
+      <li><a href="#sign-up" id="nav-sign-up">Sign Up</a></li>
+      <li><a href="#review" id="nav-review">Review</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Forms Container -->
+  <div class="container" id="form-container">
+    <div class="form-container sign-in-container" id="sign-in">
+      <h1>Sign In</h1>
+      <div class="input-field">
+        <input type="email" id="sign-in-email" placeholder="Email" required>
+      </div>
+      <div class="input-field">
+        <input type="password" id="sign-in-password" placeholder="Password" required>
+      </div>
+      <button type="submit">Sign In</button>
+    </div>
+
+    <div class="form-container sign-up-container" id="sign-up">
+      <h1>Sign Up</h1>
+      <div class="input-field">
+        <input type="text" id="sign-up-name" placeholder="Full Name" required>
+      </div>
+      <div class="input-field">
+        <input type="email" id="sign-up-email" placeholder="Email" required>
+      </div>
+      <div class="input-field">
+        <input type="password" id="sign-up-password" placeholder="Password" required>
+      </div>
+      <div class="input-field">
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+    </div>
+
+    <div class="form-container review-container" id="review">
+      <div class="info-header">
+        <h2>User Location & Time</h2>
+        <p id="user-info">Loading...</p>
+      </div>
+      <h1>Review</h1>
+      <div class="input-field">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+      <div class="input-field">
+        <input type="text" placeholder="Write Your Review" required>
+      </div>
+      <button type="submit">Submit Review</button>
+    </div>
+  </div>
+
+  <script>
+    // Get Navbar Links
+    const navSignIn = document.getElementById('nav-sign-in');
+    const navSignUp = document.getElementById('nav-sign-up');
+    const navReview = document.getElementById('nav-review');
+    const formContainer = document.getElementById('form-container');
+    const userInfo = document.getElementById('user-info');
+
+    // Show corresponding forms based on navigation click
+    const forms = {
+      'sign-in': document.getElementById('sign-in'),
+      'sign-up': document.getElementById('sign-up'),
+      'review': document.getElementById('review')
+    };
+
+    function showForm(formId) {
+      formContainer.style.display = 'flex';
+      Object.keys(forms).forEach(key => {
+        forms[key].style.display = key === formId ? 'block' : 'none';
+      });
+    }
+
+    navSignIn.addEventListener('click', () => showForm('sign-in'));
+    navSignUp.addEventListener('click', () => showForm('sign-up'));
+    navReview.addEventListener('click', () => showForm('review'));
+
+    // Fetch User Location & Time
+    async function fetchUserLocation() {
+      try {
+        const res = await fetch('https://ipapi.co/json/');
+        const data = await res.json();
+        const dateTime = new Date().toLocaleString();
+        userInfo.textContent = `Location: ${data.city}, ${data.region}, ${data.country_name} | Date & Time: ${dateTime}`;
+      } catch (error) {
+        userInfo.textContent = 'Unable to fetch location and time.';
+      }
+    }
+
+    fetchUserLocation();
+  </script>
+</body>
+</html>
